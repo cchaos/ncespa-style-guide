@@ -6,29 +6,74 @@
 
 #main-footer {
   background-color: $menubar-background;
-  padding: 0;
+  padding: $global-padding 0;
+  text-align: center;
 
-  h5 {
-    color: lighten($menubar-background, 20);
+  .inline {
+    margin: $global-padding/2 0;
   }
 
-  .sponsors,
-  .partners {
+  .social {
     a {
-      margin: $global-padding;
+      font-size: 1.2rem;
+      padding: $global-padding;
+    }
+  }
+
+  .terms li {
+    margin: 0 $global-padding;
+    a {
+      @extend %uppercase;
+      font-size: $small-font-size;
+      color: lighten($menubar-background, 20);
+    }
+  }
+
+  h5 {
+    @extend %uppercase;
+    font-size: 60%;
+    color: lighten($menubar-background, 20);
+
+    &:last-of-type {
+      margin-top: $global-padding;
+    }
+  }
+
+  .sponsors {
+    a {
+      display: inline-block;
+      margin: $global-padding/2;
     }
 
     img {
-      height: 30px;
+      height: rem-calc(24);
       filter: grayscale(1);
       opacity: .5;
     }
   }
 
-  li {
-    a {
-      @extend %uppercase;
-      font-size: $small-font-size;
+  .copy {
+    margin: $global-padding 0 0;
+    line-height: 1;
+  }
+
+  @include breakpoint(medium) {
+    text-align: left;
+
+    .social,
+    .terms {
+      text-align: right;
+    }
+
+    .social {
+      margin-bottom: $global-padding*2;
+      a {
+        font-size: rem-calc(24);
+      }
+    }
+
+    .copy {
+      margin-top: $global-padding*2;
     }
   }
 
