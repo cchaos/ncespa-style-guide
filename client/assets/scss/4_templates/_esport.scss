@@ -1,12 +1,7 @@
 #esport-sub-nav {
 
-  .current-sport {
-    padding: $menubar-item-padding;
+  .current-sport a {
     color: $primary-color;
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
-    line-height: 1;
-
     border-bottom: 3px solid $primary-color;
   }
 
