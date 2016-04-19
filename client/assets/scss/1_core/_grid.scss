@@ -1,0 +1,18 @@
+/*
+//
+// GRID
+//
+*/
+
+// make sure the body doesn't scroll
+body {
+  overflow: hidden;
+}
+
+.grid-frame {
+  overflow-y: auto;
+
+  main {
+    overflow: visible;
+  }
+}

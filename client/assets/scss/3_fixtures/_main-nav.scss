@@ -1,0 +1,46 @@
+/*
+//
+// MAIN NAVIGATION
+//
+*/
+
+#main-nav {
+  background-color: $menubar-background;
+  padding: 0;
+
+  li:not(.brand) {
+    border-right: 1px solid $menubar-background-active;
+
+    &:first-of-type {
+      border-left: 1px solid $menubar-background-active;
+    }
+
+    a {
+      @extend %uppercase;
+      padding: $global-padding/2 $global-padding*2;
+    }
+
+  }
+
+  .brand a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+#sub-nav {
+  background-color: $menubar-background;
+  margin-left: -$global-padding;
+  margin-right: -$global-padding;
+
+  .menu-group {
+    border-top: 1px solid $menubar-background-active;
+  }
+
+  a {
+    font-size: $small-font-size;
+    font-weight: $font-weight-bold;
+  }
+
+}

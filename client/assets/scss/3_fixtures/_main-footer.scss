@@ -1,0 +1,35 @@
+/*
+//
+// MAIN FOOTER
+//
+*/
+
+#main-footer {
+  background-color: $menubar-background;
+  padding: 0;
+
+  h5 {
+    color: lighten($menubar-background, 20);
+  }
+
+  .sponsors,
+  .partners {
+    a {
+      margin: $global-padding;
+    }
+
+    img {
+      height: 30px;
+      filter: grayscale(1);
+      opacity: .5;
+    }
+  }
+
+  li {
+    a {
+      @extend %uppercase;
+      font-size: $small-font-size;
+    }
+  }
+
+}

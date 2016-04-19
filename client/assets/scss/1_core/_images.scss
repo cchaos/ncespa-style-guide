@@ -1,0 +1,88 @@
+/*
+//
+// IMAGES
+// Styles for the group,user,team, and tournament images
+//
+*/
+
+// ROUND USER PROFILE IMAGE
+
+$all-images: ".user-image, .group-image, .team-image";
+$images-size-small: 2.5rem;
+$images-size-medium: 4rem;
+$images-size-large: 6rem;
+$images-size-profile: 8rem;
+
+#{$all-images} {
+  display: inline-block;
+  text-align: center;
+
+  color: $secondary-color;
+
+  // .no-bg should be added automatically if there is an image so there is no artifacting of the background around the edges
+  &:not(.no-bg) {
+    background-color: $gray-dark;
+  }
+
+  // make sure the image doesn't peak outside of rounded bounds
+  overflow: hidden;
+
+  // make sure the image fills the whole area without stretching the image
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: inherit;
+  }
+
+  // if it's in a link add some shadows
+  a & {
+    @include shadow-2dp;
+    @include basic-transition;
+
+    &:focus,
+    &:hover {
+      @include focus-shadow;
+    }
+  }
+
+  // sizing is added to the outer container when placing the component
+  // default is small
+  &,
+  .small & {
+    width: $images-size-small;
+    height: $images-size-small;
+    line-height: $images-size-small;
+  }
+
+  .medium & {
+    width: $images-size-medium;
+    height: $images-size-medium;
+    line-height: $images-size-medium;
+    font-size: 1.5em;
+  }
+
+  .large & {
+    width: $images-size-large;
+    height: $images-size-large;
+    line-height: $images-size-large;
+    font-size: 2em;
+  }
+
+  .profile & {
+    width: $images-size-profile;
+    height: $images-size-profile;
+    line-height: $images-size-profile;
+    font-size: 3em;
+  }
+
+}
+
+.user-image {
+  border-radius: $global-rounded;
+}
+
+.team-image,
+.group-image {
+  border-radius: $global-radius;
+}

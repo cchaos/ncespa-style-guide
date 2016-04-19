@@ -12,13 +12,47 @@
   </head>
   <body>
     <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a><strong>Foundation for Apps</strong></a></li>
+
+      <nav id="main-nav" class="grid-content shrink">
+        <div class="menu-group grid-container">
+          <div class="menu-group-left">
+            <ul class="menu-bar">
+              <li class="brand"><a ui-sref="home"><strong><img src="assets/img/NCESPA_logo.png" alt="NCESPA logo"></strong></a></li>
+            </ul>
+          </div>
+          <div class="menu-group-right">
+            <ul class="menu-bar">
+              <li ui-sref-active="is-active"><a ui-sref="home">Home</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="news">News</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="esport">eSports</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main ui-view class="grid-content">
+      </main>
+
+      <footer id="main-footer" class="content shrink">
+        <div class="grid-block align-center">
+          <div class="sponsors grid-content shrink">
+            <h5>Our Sponsors</h5>
+            <a href="http://www.twitch.tv/"><img src="assets/img/Twitch_logo.png" alt="Twitch"></a>
+          </div>
+          <div class="partners grid-content shrink">
+            <h5>Our Partners</h5>
+            <a href="http://spheric.io"><img src="assets/img/Spheric_logo.png" alt="Spheric"></a>
+            <a href="http://www.allinmag.com/"><img src="assets/img/all_in_logo.png" alt="ALL IN"></a>
+            <a href="http://www.collegegamingtour.com/"><img src="assets/img/CGT_logo.png" alt="College Gaming Tour"></a>
+          </div>
+        </div>
+        <p class="text-center"><small>&copy;2015 The National Collegiate e-Sports Association &reg;. All Rights Reserved.</small></p>
+        <ul class="inline text-center">
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy</a></li>
         </ul>
-      </div>
-      <div ui-view class="grid-content">
-      </div>
+      </footer>
     </div>
   </body>
 </html>
