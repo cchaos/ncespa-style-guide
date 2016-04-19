@@ -4,15 +4,17 @@
 //
 */
 
+$menubar-border-color: lighten($menubar-background, 10);
+
 #main-nav {
   background-color: $menubar-background;
   padding: 0;
 
   li:not(.brand) {
-    border-right: 1px solid $menubar-background-active;
+    border-right: 1px solid $menubar-border-color;
 
     &:first-of-type {
-      border-left: 1px solid $menubar-background-active;
+      border-left: 1px solid $menubar-border-color;
     }
 
     a {
@@ -29,13 +31,13 @@
 
 }
 
-#sub-nav {
+.sub-nav {
   background-color: $menubar-background;
   margin-left: -$global-padding;
   margin-right: -$global-padding;
 
   .menu-group {
-    border-top: 1px solid $menubar-background-active;
+    border-top: 1px solid $menubar-border-color;
   }
 
   a {

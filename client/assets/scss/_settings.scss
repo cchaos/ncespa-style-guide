@@ -106,9 +106,9 @@ $info-color: #A0D3E8;
 $success-color: #43AC6A;
 $warning-color: #F08A24;
 $dark-color: #232323;
-$gray: #dfdfdf;
-$gray-dark: darken($gray, 65);
-$gray-light: lighten($gray, 8);
+$gray: #aaa;
+$gray-dark: darken($gray, 50);
+$gray-light: lighten($gray, 50);
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 4px;
@@ -428,11 +428,11 @@ $container-width: rem-calc(1200);
 
 $menubar-fontsize: $small-font-size;
 $menubar-background: $gray-dark;
-// $menubar-background-hover: smartscale($menubar-background, 7%);
+$menubar-background-hover: transparent;
 // $menubar-background-active: $menubar-background-hover;
-// $menubar-color: isitlight($menubar-background);
-// $menubar-color-hover: $menubar-color;
-// $menubar-color-active: $menubar-color-hover;
+$menubar-color: isitlight($menubar-background, $dark-color, $gray);
+$menubar-color-hover: isitlight($menubar-background, $dark-color, $gray-light);
+$menubar-color-active: isitlight($menubar-background, $dark-color, white);
 
 // $menubar-item-padding: $global-padding;
 // $menubar-icon-size: 25px;
