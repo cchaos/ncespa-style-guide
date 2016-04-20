@@ -13,6 +13,8 @@
 
 }
 
+// TEAMS
+
 .team-header {
   background-color: $secondary-color;
 
@@ -48,3 +50,50 @@
     }
   }
 }
+
+// SCHEDULE
+
+.esport-schedule {
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+
+  .matchup {
+
+    margin-bottom: 1rem;
+
+    .teams {
+      p {
+        margin-bottom: 0;
+
+        &:first-child {
+          border-bottom: 1px solid rgba($gray, .5);
+          margin-bottom: .25rem;
+          padding-bottom: .25rem;
+        }
+      }
+    }
+
+    .vs {
+      display: none;
+      vertical-align: middle;
+      margin: -3rem .5rem 0;
+    }
+
+    .status {
+      .button {
+        margin: 0;
+      }
+    }
+
+    @include breakpoint(medium) {
+      .team-image {
+        @include image-sizing($images-size-medium);
+      }
+      .vs {
+        display: inline-block;
+      }
+    }
+
+  }
+}
+
