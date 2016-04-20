@@ -35,6 +35,7 @@
    @import "1_core/images";
 // Buttons
 // ----------------------
+   @import "1_core/buttons";
 // Forms
 // ----------------------
 // Tables
@@ -54,6 +55,7 @@
 // ----------------------
 // Blocks
 // ----------------------
+   @import "2_elements/vods";
 // Extras
 // -------------------------
 
@@ -67,7 +69,8 @@
 // -------------------------
 */
    @import "3_fixtures/main-nav",
-           "3_fixtures/main-footer";
+           "3_fixtures/main-footer",
+           "3_fixtures/teams-table";
 
 
 

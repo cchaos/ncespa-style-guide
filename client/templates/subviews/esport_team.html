@@ -1,0 +1,86 @@
+---
+name: esport.team
+url: /team
+---
+
+<header class="team-header">
+  <div class="grid-container">
+  	<div class="grid-block v-align vertical medium-horizontal nowrap">
+  		<div class="info grid-block nowrap noscroll">
+  		  <div class="grid-content shrink">
+  		    <div ng-include="'templates/components/_team-image.html'" class="medium"></div>
+  		  </div>
+  		  <div class="grid-content">
+  		    <h1 class="name">Awesome Team has a long name</h1>
+				  <h3 class="subheader">New York University &emsp; <strong>CS:GO</strong></h3>
+				</div>
+  		</div>
+  		<div class="stats grid-block align-justify v-align">
+  		  <div class="grid-content align-center">
+  		    <h6 class="subheader">Rank</h6>
+  		    <h3 class="stat"><strong>Master</strong></h3>
+  		  </div>
+  		  <div class="grid-content align-center">
+  		    <h6 class="subheader">Win/Loss</h6>
+  		    <h3 class="stat"><strong>51/25</strong></h3>
+  		  </div>
+  		</div>
+  	</div>
+  </div>
+</header>
+
+<div class="team-content grid-container">
+	<section class="grid-content noscroll">
+
+    <div class="grid-block">
+      <div class="grid-content medium-7">
+        <h2>Matches</h2>
+        <table class="zebra">
+    	    <tbody>
+      	    <tr ng-repeat="i in [1,2,3,4,5,6,7] track by $index">
+        	    <td class="tournament"><a href="" ui-sref="tournament">District Unite</a></td>
+        	    <td class="vs">vs</td>
+        	    <td class="image" width="50"><span ng-include="'templates/components/_team-image.html'" class="small"></span></td>
+        	    <td width="50%" class="team">Fantastic Team</td>
+        	    <td ng-if="$index < 3" class="date">Feb. {{$index + 5}}</td>
+        	    <td ng-if="$index >= 3" class="score">Win</td>
+      	    </tr>
+    	    </tbody>
+        </table>
+        <h2>Roster</h2>
+        <table class="zebra">
+          <thead>
+            <th>Name</th>
+            <th>Stat</th>
+            <th>Stat</th>
+            <th>Stat</th>
+          </thead>
+        	<tbody>
+        		<tr ng-repeat="$i in [1,2,3,4,5,6,7,8,9]">
+        			<td><strong>Player Name</strong></td>
+        			<td>Stat 1</td>
+        			<td>Stat 2</td>
+        			<td>Stat 3</td>
+        		</tr>
+        	</tbody>
+        </table>
+      </div>
+
+      <div class="grid-content medium-5">
+        <h2>Stats</h2>
+        <h6 class="subheader"><strong>TBD</strong></h6>
+
+        <h2>VODS</h2>
+        <ul class="grid-block small-up-2">
+          <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
+            <a class="vod">
+              <img src="http://placehold.it/160x90" alt="">
+              <i class="fa fa-youtube-play fa-inverse fa-2x"></i>
+            </a>
+          </li>
+    	  </ul>
+      </div>
+    </div>
+
+	</section>
+</div>

@@ -1,3 +1,9 @@
+/*
+//
+// eSPORT PAGE TEMPLATES
+//
+*/
+
 #esport-sub-nav {
 
   .current-sport a {
@@ -5,4 +11,40 @@
     border-bottom: 3px solid $primary-color;
   }
 
+}
+
+.team-header {
+  background-color: $secondary-color;
+
+  .info,
+  .stats {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .team-image {
+    margin-top: .25rem;
+  }
+
+  .name {
+    margin-top: 0;
+  }
+
+  .stat {
+    margin-bottom: 0;
+  }
+
+  .stats {
+    text-align: center;
+    background-color: $primary-color;
+
+    .subheader {
+      color: rgba(white, .5);
+      @extend %uppercase;
+      font-size: $small-font-size;
+    }
+    .stat {
+      color: white;
+    }
+  }
 }

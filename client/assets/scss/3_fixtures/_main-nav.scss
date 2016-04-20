@@ -8,7 +8,6 @@ $menubar-border-color: lighten($menubar-background, 10);
 
 #main-nav {
   background-color: $menubar-background;
-  padding: 0;
 
   li:not(.brand) {
     border-right: 1px solid $menubar-border-color;
@@ -22,6 +21,10 @@ $menubar-border-color: lighten($menubar-background, 10);
       padding: $global-padding/2 $global-padding*2;
     }
 
+    &.is-active a {
+      color: $primary-color;
+    }
+
   }
 
   .brand a {
@@ -33,16 +36,14 @@ $menubar-border-color: lighten($menubar-background, 10);
 
 .sub-nav {
   background-color: $menubar-background;
-  margin-left: -$global-padding;
-  margin-right: -$global-padding;
 
   .menu-group {
     border-top: 1px solid $menubar-border-color;
-  }
 
-  a {
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
+    a {
+      font-size: 90%;
+      font-weight: $font-weight-bold;
+    }
   }
 
 }
