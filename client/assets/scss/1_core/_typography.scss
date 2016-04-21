@@ -64,10 +64,8 @@
 }
 
 %section-header {
-  border-bottom: 3px solid $secondary-color;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
   @extend %uppercase;
   font-size: $small-font-size;
 }

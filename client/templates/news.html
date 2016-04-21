@@ -5,40 +5,16 @@ url: /news
 
 <div id="news-page" class="grid-container">
 
-  <div class="grid-content">
-  	<div class="featured-news large card" ui-sref="article">
-  	  <img src="https://source.unsplash.com/featured/random" alt="">
-  	  <div class="card-section">
-  	  	<h6 class="date">27 February 2016</h6>
-  	  	<h2 class="title">This is a large featured news post</h2>
-  	  	<p class="description">Kombucha direct trade  viral master cleanse.  Skateboard mlkshk pinterest man braid, whatever man bun brooklyn locavore kickstarter humblebrag try-hard photo booth letterpress.</p>
-  	  	<p class="link"><a ui-sref="article">Read full article</a></p>
-  	  </div>
-  	</div>
-  </div>
+	<div class="grid-content" ng-include="'templates/components/_large-featured-news.html'"></div>
 
   <div class="grid-block small-up-1 medium-up-3">
-    <div class="grid-content" ng-repeat="$i in [1,2,3]" ui-sref="article">
-      <div class="featured-news card">
-        <img src="https://source.unsplash.com/featured/random" alt="">
-        <div class="card-section">
-          <h6 class="date">27 February 2016</h6>
-          <h2 class="title">Small Featured News</h2>
-          <p class="description">Four loko blue bottle tumblr synth, stumptown plaid gluten-free wayfarers kombucha.  Gochujang cray biodiesel lomo, iPhone echo park brooklyn mixtape narwhal normcore.</p>
-          <p class="link"><a ui-sref="article">Read full article</a></p>
-        </div>
-      </div>
-    </div>
+    <div class="grid-content" ng-repeat="$i in [1,2,3]" ng-include="'templates/components/_featured-news.html'"></div>
   </div>
 
   <div class="grid-block wrap">
     <div class="grid-content news-list">
-      <div class="news-list-item" ng-repeat="$i in [1,2,3]">
-        <h6 class="date">27 February 2016</h6>
-        <h3 class="title">News List Item</h3>
-        <p class="description">Yr retro try-hard 90's.  Mumblecore disrupt gochujang, tacos fashion axe ennui dreamcatcher franzen.  Lomo tote bag fanny pack, selfies food truck mumblecore next level disrupt green juice post-ironic humblebrag ugh irony.</p>
-        <p class="link"><a ui-sref="article">Read full article</a></p>
-      </div>
+      <hr class="plain">
+      <div ng-repeat="$i in [1,2,3]" ng-include="'templates/components/_news-list-item.html'"></div>
     </div>
     <div class="grid-content twitter-feed">
         <a class="twitter-timeline" href="https://twitter.com/NCeSPA" data-widget-id="722929062285484040">Tweets by @NCeSPA</a>

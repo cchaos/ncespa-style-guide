@@ -17,3 +17,18 @@ body {
     flex-grow: 1;
   }
 }
+
+// custom har with a bit of brand color on left
+hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, $gray-light 0%, $gray-light 66%, $primary-color 66%, $primary-color 100%);
+
+  &.opposite {
+    background: linear-gradient(to right, $primary-color 0%, $primary-color 33%, $gray-light 33%, $gray-light 100%);
+  }
+
+  &.plain {
+    background: $gray-light;
+  }
+}

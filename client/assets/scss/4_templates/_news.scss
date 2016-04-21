@@ -4,7 +4,7 @@
 //
 */
 
-$news-list-item-border: 3px solid $secondary-color;
+$news-list-item-border: 3px solid $gray-light;
 
 #news-page {
   margin-top: 2rem;
@@ -58,38 +58,27 @@ $news-list-item-border: 3px solid $secondary-color;
     max-height: 15rem;
   }
 
-
   @include breakpoint(medium) {
-
-    position: relative;
-    min-height: 15rem;
     max-height: 36rem;
     overflow: hidden;
-
-    background: linear-gradient(45deg, $gray-dark 10%, white 90%);
-    color: white !important;
+    border: 1px solid rgba($body-background, 0); // keeps the image from bleeding outside the rounded corners
+    margin-bottom: 2rem;
 
     img {
       display: block;
-      height: 100%;
       max-height: none;
+      height: 100%;
       width: 100%;
       vertical-align: inherit;
       opacity: .8;
     }
 
-    .title {
-      font-weight: $font-weight-bold;
-    }
-
+    position: relative;
     .card-section {
       position: absolute;
       bottom: 0;
       left: 0;
-
-      max-height: 100%;
     }
-
   }
 }
 
@@ -98,19 +87,16 @@ $news-list-item-border: 3px solid $secondary-color;
     font-weight: $font-weight-bold;
   }
 
-  p {
+  p:not(.link) {
     font-size: .9rem;
-    opacity: .8;
     max-width: 36rem;
   }
 
-  &:not(.card) {
-    border-bottom: $news-list-item-border;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+  .link {
+    text-align: right;
   }
 
-  &.card {
+  .card & {
     padding: $global-padding;
   }
 }

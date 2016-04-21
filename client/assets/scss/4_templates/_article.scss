@@ -19,7 +19,11 @@
       text-align: center;
       opacity: .5;
       font-size: $small-font-size;
-      margin-bottom: 4rem;
+    }
+
+    hr {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -38,7 +42,7 @@
     }
 
     @include breakpoint(large) {
-      padding-right: 5rem;
+      padding-right: 10%;
     }
   }
 }

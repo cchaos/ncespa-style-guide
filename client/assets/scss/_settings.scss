@@ -94,7 +94,7 @@ $font-weight-bold: 900;
 
 // We use these to control various global styles
 // $body-background: #fff;
-// $body-font-color: #222;
+$body-font-color: #333;
 $body-font-family: "Lato", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -107,10 +107,10 @@ $alert-color: #F04124;
 $info-color: #A0D3E8;
 $success-color: #43AC6A;
 $warning-color: #F08A24;
-$dark-color: #232323;
+$dark-color: #2B2B2B;
 $gray: #aaa;
-$gray-dark: darken($gray, 50);
-$gray-light: lighten($gray, 50);
+$gray-dark: $dark-color;
+$gray-light: #ddd;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 4px;
@@ -142,7 +142,7 @@ $breakpoints: (
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
-// $header-font-color: #222;
+$header-font-color: $body-font-color;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -324,8 +324,8 @@ $container-width: rem-calc(1200);
 // 11. Card
 // - - - - - - - - - - - - - - -
 
-// $card-background: #fff;
-// $card-color: isitlight($card-background);
+$card-background: #fff;
+$card-color: isitlight($card-background, $body-font-color, white);
 $card-border: 1px solid rgba($gray, .5);
 // $card-radius: $global-radius;
 $card-shadow: none;

@@ -10,6 +10,7 @@ url: /article
   	<header>
   	  <h1 class="title">This is an article</h1>
   		<h6 class="date">27 February 2016</h6>
+  		<hr>
     </header>
 
     <div class="grid-block">
@@ -29,11 +30,8 @@ url: /article
 
       <section class="grid-content large-4 news-list">
       	<h2>In Other News</h2>
-    	  <div class="news-list-item card" ng-repeat="$i in [1,2,3]">
-    	    <h6 class="date">27 February 2016</h6>
-    	    <h3 class="title">News Item</h3>
-    	    <p class="description">Yr retro try-hard 90's.  Mumblecore disrupt gochujang, tacos fashion axe ennui dreamcatcher franzen.  Lomo tote bag fanny pack, selfies food truck mumblecore next level disrupt green juice post-ironic humblebrag ugh irony.</p>
-    	    <p class="link"><a ui-sref="article">Read full article</a></p>
+      	<div class="news-list card">
+        	<div ng-repeat="$i in [1,2,3]" ng-include="'templates/components/_news-list-item.html'"></div>
       	</div>
       </section>
 
