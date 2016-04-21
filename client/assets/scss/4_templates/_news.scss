@@ -1,0 +1,84 @@
+/*
+//
+// NEWS PAGE TEMPLATE
+//
+*/
+
+#news-page {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.featured-news,
+.news-list {
+
+  .date,
+  .link {
+    @extend %uppercase;
+    font-size: $small-font-size;
+  }
+
+  .date {
+    opacity: .5;
+    font-size: $small-font-size*.8;
+  }
+
+  .description {
+    max-width: 36rem
+  }
+
+  .link {
+    margin-bottom: 0;
+  }
+
+}
+
+.featured-news {
+  img {
+    max-height: 15rem;
+    object-fit: cover;
+  }
+}
+
+.featured-news.large {
+  @include breakpoint(medium) {
+
+    position: relative;
+    min-height: 15rem;
+    max-height: 30rem;
+    overflow: hidden;
+
+    background: linear-gradient(45deg, $gray-dark 10%, white 90%);
+    color: white !important;
+
+    img {
+      display: block;
+      height: 100%;
+      max-height: none;
+      width: 100%;
+      vertical-align: inherit;
+      opacity: .8;
+    }
+
+    .title {
+      font-size: $h1-font-size;
+      font-weight: $font-weight-bold;
+    }
+
+    .card-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      max-height: 100%;
+      max-width: 36rem;
+    }
+
+  }
+}
+
+.news-list-item {
+  border-bottom: 1px solid $secondary-color;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}

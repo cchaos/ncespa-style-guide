@@ -3,6 +3,58 @@ name: news
 url: /news
 ---
 
-<div class="grid-container">
-  <h1>News</h1>
+<div id="news-page" class="grid-container">
+
+  <div class="grid-content">
+  	<div class="featured-news large card">
+  	  <img src="https://source.unsplash.com/featured/random" alt="">
+  	  <div class="card-section">
+  	  	<h6 class="date">27 February 2016</h6>
+  	  	<h2 class="title">This is a featured new post</h2>
+  	  	<p class="description">Kombucha direct trade  viral master cleanse.  Skateboard mlkshk pinterest man braid, whatever man bun brooklyn locavore kickstarter humblebrag try-hard photo booth letterpress.</p>
+  	  	<p class="link"><a href="article">Read full article</a></p>
+  	  </div>
+  	</div>
+  </div>
+
+  <div class="grid-block small-up-1 medium-up-3">
+    <div class="grid-content" ng-repeat="$i in [1,2,3]">
+      <div class="featured-news card">
+        <img src="https://source.unsplash.com/featured/random" alt="">
+        <div class="card-section">
+          <h6 class="date">27 February 2016</h6>
+          <h2 class="title">News Item</h2>
+          <p class="description">Four loko blue bottle tumblr synth, stumptown plaid gluten-free wayfarers kombucha.  Gochujang cray biodiesel lomo, iPhone echo park brooklyn mixtape narwhal normcore.</p>
+          <p class="link"><a href="article">Read full article</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+<div class="horizontal-news card">
+    <img src="https://source.unsplash.com/featured/random" alt="">
+    <div class="card-section">
+      <h3 class="title">News Item</h3>
+      <p>Four loko blue bottle tumblr synth, stumptown plaid gluten-free wayfarers kombucha.  Gochujang cray biodiesel lomo, iPhone echo park brooklyn mixtape narwhal normcore.</p>
+      <p><a href="article">Read full article</a></p>
+    </div>
+  </div>
+-->
+
+  <div class="grid-block wrap">
+    <div class="grid-content news-list">
+      <div class="news-list-item" ng-repeat="$i in [1,2,3]">
+        <h6 class="date">27 February 2016</h6>
+        <h2 class="title">News Item</h2>
+        <p class="description">Yr retro try-hard 90's.  Mumblecore disrupt gochujang, tacos fashion axe ennui dreamcatcher franzen.  Lomo tote bag fanny pack, selfies food truck mumblecore next level disrupt green juice post-ironic humblebrag ugh irony.</p>
+        <p class="link"><a href="article">Read full article</a></p>
+      </div>
+    </div>
+    <div class="grid-content twitter-feed">
+        <a class="twitter-timeline" href="https://twitter.com/NCeSPA" data-widget-id="722929062285484040">Tweets by @NCeSPA</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  </div>
+
 </div>
