@@ -124,13 +124,13 @@ $global-padding: 1rem;
 // - - - - - - - - - - - - - - -
 
 // These are our named breakpoints. You can use them in our breakpoint function like this: @include breakpoint(medium) { // Medium and larger styles }
-// $breakpoints: (
-//   small: rem-calc(0),
-//   medium: rem-calc(640),
-//   large: rem-calc(1200),
-//   xlarge: rem-calc(1440),
-//   xxlarge: rem-calc(1920),
-// );
+$breakpoints: (
+  small: rem-calc(0),
+  medium: rem-calc(640),
+  large: rem-calc(768),
+  xlarge: rem-calc(1200),
+  xxlarge: rem-calc(1920),
+);
 
 // All of the names in this list will be output as classes in your CSS, like small-12, medium-6, and so on.
 // $breakpoint-classes: (small medium large);
@@ -149,7 +149,7 @@ $global-padding: 1rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(28);
+$h1-font-size: rem-calc(36);
 $h2-font-size: rem-calc(24);
 $h3-font-size: rem-calc(22);
 $h4-font-size: rem-calc(20);
@@ -178,7 +178,7 @@ $small-font-size: 80%;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);

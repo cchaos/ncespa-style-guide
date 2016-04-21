@@ -27,10 +27,27 @@ url: /esport
 
   <section id="esport-home" class="grid-container" >
     <div class="grid-block wrap">
-      <div class="grid-content medium-7">
+      <div class="news grid-content large-7">
         <h2>News</h2>
+        <div class="featured-news large card">
+      	  <img src="https://source.unsplash.com/featured/random" alt="">
+      	  <div class="card-section">
+      	  	<h6 class="date">27 February 2016</h6>
+      	  	<h2 class="title">This is a featured new post</h2>
+      	  	<p class="description">Kombucha direct trade  viral master cleanse.  Skateboard mlkshk pinterest man braid, whatever man bun brooklyn locavore kickstarter humblebrag try-hard photo booth letterpress.</p>
+      	  	<p class="link"><a ui-sref="article">Read full article</a></p>
+      	  </div>
+      	</div>
+      	<div class="news-list">
+      		<div class="news-list-item" ng-repeat="$i in [1,2,3]">
+	    	    <h6 class="date">27 February 2016</h6>
+	    	    <h3 class="title">News Item</h3>
+	    	    <p class="description">Yr retro try-hard 90's.  Mumblecore disrupt gochujang, tacos fashion axe ennui dreamcatcher franzen.  Lomo tote bag fanny pack, selfies food truck mumblecore next level disrupt green juice post-ironic humblebrag ugh irony.</p>
+	    	    <p class="link"><a ui-sref="article">Read full article</a></p>
+      		</div>
+      	</div>
       </div>
-      <div class="grid-content medium-5">
+      <div class="grid-content large-5">
         <h2>Scores</h2>
         <div class="grid-block wrap">
           <div class="grid-content" ng-repeat="$i in [1,2,3,4]" ng-include="'templates/components/_matchup.html'" class="small"></div>

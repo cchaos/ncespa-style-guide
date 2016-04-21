@@ -4,13 +4,15 @@
 //
 */
 
+$news-list-item-border: 3px solid $secondary-color;
+
 #news-page {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .featured-news,
-.news-list {
+.news-list-item {
 
   .date,
   .link {
@@ -24,7 +26,7 @@
   }
 
   .description {
-    max-width: 36rem
+    @extend .ideal;
   }
 
   .link {
@@ -35,17 +37,33 @@
 
 .featured-news {
   img {
-    max-height: 15rem;
+    max-height: 8rem;
     object-fit: cover;
+  }
+
+ .title {
+    @extend %section-header;
+    font-size: $h2-font-size*.8;
+    margin-top: .5rem;
   }
 }
 
 .featured-news.large {
+
+  .title {
+    font-size: $h1-font-size*.8;
+  }
+
+  img {
+    max-height: 15rem;
+  }
+
+
   @include breakpoint(medium) {
 
     position: relative;
     min-height: 15rem;
-    max-height: 30rem;
+    max-height: 36rem;
     overflow: hidden;
 
     background: linear-gradient(45deg, $gray-dark 10%, white 90%);
@@ -61,7 +79,6 @@
     }
 
     .title {
-      font-size: $h1-font-size;
       font-weight: $font-weight-bold;
     }
 
@@ -71,14 +88,30 @@
       left: 0;
 
       max-height: 100%;
-      max-width: 36rem;
     }
 
   }
 }
 
 .news-list-item {
-  border-bottom: 1px solid $secondary-color;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  .title {
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    font-size: .9rem;
+    opacity: .8;
+    max-width: 36rem;
+  }
+
+  &:not(.card) {
+    border-bottom: $news-list-item-border;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &.card {
+    padding: $global-padding;
+  }
 }
+
