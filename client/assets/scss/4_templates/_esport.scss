@@ -21,7 +21,15 @@
 }
 
 .team-header {
-  background-color: $secondary-color;
+  background-color: $dark-color;
+
+  > div {
+    border-top: 1px solid $menubar-border-color;
+  }
+
+  .name {
+    color: white;
+  }
 
   .info,
   .stats {
