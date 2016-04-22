@@ -325,7 +325,7 @@ $container-width: rem-calc(1200);
 // - - - - - - - - - - - - - - -
 
 $card-background: #fff;
-$card-color: isitlight($card-background, $body-font-color, white);
+$card-color: isitlight($card-background, inherit, white);
 $card-border: 1px solid rgba($gray, .5);
 // $card-radius: $global-radius;
 $card-shadow: none;

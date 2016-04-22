@@ -5,8 +5,39 @@ url: /schedule
 
 <div class="esport-schedule grid-container">
 
-  <div class="grid-block wrap">
-		<div class="grid-content" ng-repeat="$i in [1,2,3,4,5,6]" ng-include="'templates/components/_matchup.html'" class="small"></div>
-  </div>
+  <section class="grid-block wrap">
+
+  	<div class="grid-content large-8">
+  		<div class="grid-block wrap">
+  		  <div class="grid-content small-12">
+  		  	<h2>Live</h2>
+  		  	<hr>
+  		  </div>
+
+				<div class="grid-content" ng-repeat-start="$i in [1,2,3,4,5,6]" ng-include="'templates/components/_matchup.html'" class="small"></div>
+
+  		  <div ng-if="$i === 2 || $i === 4" class="grid-content small-12">
+  		  	<h2>{{$i === 2 ? 'Coming Up' : 'Past'}}</h2>
+  		  	<hr>
+  		  </div>
+
+				<div ng-repeat-end></div>
+  		</div>
+  	</div>
+
+  	<div class="grid-content large-4">
+    	<h2>Other info</h2>
+    	<hr>
+    	<p>Plaid readymade try-hard gluten-free sartorial deep v celiac meh gochujang, semiotics +1 butcher mlkshk everyday carry.  Vegan paleo post-ironic williamsburg banh mi, bespoke four loko pickled jean shorts actually.  Yr keffiyeh celiac, craft beer tumblr occupy mixtape master cleanse before they sold out pabst mlkshk normcore cardigan messenger bag pop-up.</p>
+    	<p>
+    		<a class="vod">
+	        <img src="http://placehold.it/160x90" alt="">
+	        <i class="fa fa-youtube-play fa-inverse fa-2x"></i>
+	      </a>
+    	</p>
+    	<p>Kitsch swag gluten-free, wolf humblebrag thundercats meditation typewriter paleo meh irony.  Shoreditch pitchfork hashtag, stumptown marfa man bun post-ironic kitsch dreamcatcher raw denim bespoke slow-carb typewriter cronut.  Umami marfa DIY, 8-bit heirloom gentrify swag.  Migas small batch shabby chic, keffiyeh bitters drinking vinegar gastropub.</p>
+  	</div>
+
+  </section>
 
 </div>
