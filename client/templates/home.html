@@ -3,7 +3,43 @@ name: home
 url: /
 ---
 
-<div class="grid-container">
-  <h1>Welcome to Foundation for Apps!</h1>
-  <p class="lead">This is version <strong>1.2 Eiger</strong>.</p>
-</div>
+<section class="home-page grid-container">
+  <div class="grid-content">
+    <h2>Live Now</h2>
+    <hr>
+    <div class="grid-block wrap">
+      <div class="grid-content" ng-repeat="$i in [1,2]" ng-include="'templates/components/_matchup.html'" class="small"></div>
+    </div>
+  </div>
+
+
+    <div class="grid-block wrap">
+      <div class="news grid-content large-7">
+        <h2>News</h2>
+        <hr>
+        <div ng-include="'templates/components/_large-featured-news.html'"></div>
+      	<div class="news-list">
+          <hr class="plain">
+          <div ng-repeat="$i in [1,2,3]" ng-include="'templates/components/_news-list-item.html'"></div>
+        </div>
+      </div>
+      <div class="grid-content large-5">
+        <h2>Schedule</h2>
+        <hr>
+        <div class="grid-block wrap">
+          <div class="grid-content" ng-repeat="$i in [3,4]" ng-include="'templates/components/_matchup.html'" class="small"></div>
+        </div>
+        <h2>VODS</h2>
+        <hr>
+        <ul class="grid-block small-up-2">
+          <li class="grid-content" ng-repeat="i in [1,2,3,4] track by $index">
+            <a class="vod">
+              <img src="http://placehold.it/160x90" alt="">
+              <i class="fa fa-youtube-play fa-inverse fa-2x"></i>
+            </a>
+          </li>
+    	  </ul>
+      </div>
+    </div>
+
+</section>
