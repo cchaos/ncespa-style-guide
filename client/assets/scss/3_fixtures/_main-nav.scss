@@ -8,23 +8,24 @@ $menubar-border-color: lighten($menubar-background, 10);
 
 #main-nav {
   background-color: $menubar-background;
+  position: relative;
 
-  li:not(.brand) {
-    border-right: 1px solid $menubar-border-color;
+  .menu-group > .menu-group-left,
+  .menu-group > .menu-group-right {
+    flex-basis: auto;
+  }
 
-    &:first-of-type {
-      border-left: 1px solid $menubar-border-color;
+  li.is-active a {
+    color: $primary-color;
+  }
+
+  a {
+    font-weight: $font-weight-bold;
+    @extend %uppercase;
+    display: block;
+    i {
+      margin-left: .5rem;
     }
-
-    a {
-      @extend %uppercase;
-      padding: $global-padding/2 $global-padding*2;
-    }
-
-    &.is-active a {
-      color: $primary-color;
-    }
-
   }
 
   .brand a {
@@ -32,7 +33,99 @@ $menubar-border-color: lighten($menubar-background, 10);
     padding-right: 0;
   }
 
+  .menu-group-right > .menu-bar {
+    justify-content: flex-end;
+  }
+
+  .toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: $menubar-item-padding;
+  }
+
+  @include breakpoint(small only) {
+    .brand {
+      a {
+        padding-top: $menubar-item-padding/2;
+        padding-bottom: $menubar-item-padding/2;
+      }
+
+      img {
+        height: 32px;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    .toggle {
+      display: none;
+    }
+  }
 }
+
+#mobile-nav {
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+#desktop-nav {
+  display: none;
+
+  > li {
+    border-right: 1px solid $menubar-border-color;
+
+    &:first-of-type {
+      border-left: 1px solid $menubar-border-color;
+    }
+
+    > a {
+      padding: $global-padding/2 $global-padding*2;
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: flex;
+  }
+}
+
+
+// DROPDOWN LISTS
+
+.nav-dropdown {
+  margin: 0;
+  list-style: none;
+
+  @include menu-bar-style(
+    $background: $menubar-background,
+    $background-hover: darken($menubar-border-color, 5),
+    $background-active: darken($menubar-border-color, 5),
+    $color: $menubar-color,
+    $color-hover: $menubar-color-hover,
+    $color-active: $primary-color);
+
+  li:not(.sub-item) {
+    border-top: 1px solid $menubar-border-color;
+  }
+
+  a {
+    display: block;
+    @extend %uppercase;
+    line-height: 1;
+    padding: $menubar-item-padding;
+    font-size: $menubar-fontsize;
+  }
+
+  .header {
+    padding: $menubar-item-padding/2 $menubar-item-padding;
+    color: darken($gray, 20);
+    font-weight: $font-weight-bold;
+    font-size: $menubar-fontsize;
+  }
+}
+
+// Sub Page Nav
 
 .sub-nav {
   background-color: $menubar-background;
@@ -43,6 +136,10 @@ $menubar-border-color: lighten($menubar-background, 10);
     a {
       font-size: 90%;
       font-weight: $font-weight-bold;
+      display: block;
+      i {
+        margin-left: .5rem;
+      }
     }
   }
 

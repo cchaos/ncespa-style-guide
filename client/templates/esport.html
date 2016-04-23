@@ -8,15 +8,32 @@ url: /esport
     <div class="menu-group-left">
       <ul class="menu-bar">
         <li class="current-sport"><a ui-sref="esport">eSport Name</a></li>
+      </ul>
+    </div>
+    <div class="menu-group-center">
+      <ul class="menu-bar">
         <li ui-sref-active="is-active"><a ui-sref="esport.teams">Teams</a></li>
         <li ui-sref-active="is-active"><a ui-sref="esport.schedule">Schedule</a></li>
-        <li ui-sref-active="is-active"><a ui-sref="esport.standings">Standings</a></li>
+        <li class="has-dropdown standings-dropdown">
+          <a zf-popup-toggle="standings-popup">Standings <i class="fa fa-caret-down"></i></a>
+          <zf-popup id="standings-popup">
+          	<ul class="nav-dropdown">
+          		<li><a href="">Regular Season</a></li>
+          		<li><a href="">Playoffs</a></li>
+          	</ul>
+          </zf-popup>
+        </li>
       </ul>
     </div>
     <div class="menu-group-right">
       <ul class="menu-bar">
-        <li class="has-dropdown">
-          <a href="">Division I</a>
+        <li class="has-dropdown division-dropdown">
+          <a zf-popup-toggle="division-popup">Division I <i class="fa fa-caret-down"></i></a>
+          <zf-popup id="division-popup">
+          	<ul class="nav-dropdown">
+          		<li ng-repeat="$i in ['I', 'II', 'III']" ng-class="{'is-active': $i === 'I'}"><a href="">Division {{$i}}</a></li>
+          	</ul>
+          </zf-popup>
         </li>
       </ul>
     </div>
