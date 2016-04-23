@@ -11,6 +11,10 @@
     border-bottom: 3px solid $primary-color;
   }
 
+  .division-dropdown > a {
+    color: $primary-color;
+    @extend %uppercase;
+  }
 }
 
 // TEAMS

@@ -15,8 +15,13 @@ url: /esport
     </div>
     <div class="menu-group-right">
       <ul class="menu-bar">
-        <li class="has-dropdown">
-          <a href="">Division I</a>
+        <li class="has-dropdown division-dropdown">
+          <a zf-popup-toggle="division-popup">Division I <i class="fa fa-caret-down"></i></a>
+          <zf-popup id="division-popup">
+          	<ul class="nav-dropdown">
+          		<li ng-repeat="$i in ['I', 'II', 'III']" ng-class="{'is-active': $i === 'I'}"><a href="">Division {{$i}}</a></li>
+          	</ul>
+          </zf-popup>
         </li>
       </ul>
     </div>
