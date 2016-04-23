@@ -8,29 +8,137 @@ $menubar-border-color: lighten($menubar-background, 10);
 
 #main-nav {
   background-color: $menubar-background;
+  position: relative;
 
-  li:not(.brand) {
-    border-right: 1px solid $menubar-border-color;
+  .menu-group > .menu-group-left,
+  .menu-group > .menu-group-right {
+    flex-basis: auto;
+  }
 
-    &:first-of-type {
-      border-left: 1px solid $menubar-border-color;
-    }
+  li.is-active a {
+    color: $primary-color !important;
+  }
 
-    a {
-      @extend %uppercase;
-      padding: $global-padding/2 $global-padding*2;
-    }
-
-    &.is-active a {
-      color: $primary-color;
-    }
-
+  a {
+    font-weight: $font-weight-bold;
+    display: block;
   }
 
   .brand a {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .menu-group-right > .menu-bar {
+    justify-content: flex-end;
+  }
+
+  .toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: $menubar-item-padding;
+  }
+
+  .dropdown > li > a {
+    @extend %uppercase;
+  }
+
+  /*
+.has-dropdown {
+    flex-direction: column;
+
+    ul {
+      margin: 0;
+      @include menu-bar-style;
+      list-style: none;
+
+      a {
+        line-height: 1;
+        padding: $global-padding;
+      }
+    }
+  }
+
+  @include breakpoint(small only) {
+    .brand {
+      a {
+        padding-top: $menubar-item-padding/2;
+        padding-bottom: $menubar-item-padding/2;
+      }
+
+      img {
+        height: 32px;
+      }
+    }
+
+    // position the whole navigation dropdown
+    .dropdown {
+      //display: none;
+      position: absolute;
+      width: 100%;
+      right: 0;
+      top: 48px;
+      z-index: 2000;
+      @include shadow-4dp;
+
+      flex-direction: column;
+
+      > li {
+        border-top: 1px solid $menubar-border-color;
+      }
+    }
+
+    // style it as a list header
+    .has-dropdown {
+      > a {
+        padding-bottom: $menubar-item-padding*1.25;
+        pointer-events: none;
+        color: darken($gray, 25);
+        font-weight: $font-weight-normal;
+        &::after {
+          content: ":";
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+
+    .toggle {
+      display: none;
+    }
+
+    .dropdown > li {
+      border-right: 1px solid $menubar-border-color;
+
+      &:first-of-type {
+        border-left: 1px solid $menubar-border-color;
+      }
+
+      > a {
+        padding: $global-padding/2 $global-padding*2;
+      }
+    }
+
+    .has-dropdown {
+      > a {
+        &::after {
+          content: "\f0d7";
+          font: normal normal normal 14px/1 FontAwesome;
+          margin-left: .5rem;
+        }
+      }
+      > ul {
+        position: absolute;
+        top: 4.5rem;
+        right: 8rem;
+        z-index: 2000;
+      }
+    }
+
+  }
+*/
 
 }
 

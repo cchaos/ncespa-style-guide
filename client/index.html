@@ -21,9 +21,17 @@
             </ul>
           </div>
           <div class="menu-group-right">
-            <ul class="menu-bar">
+            <a class="toggle" href=""><i class="fa fa-bars" title="Menu"></i></a>
+            <ul class="menu-bar dropdown">
               <li ui-sref-active="is-active"><a ui-sref="news">News</a></li>
-              <li ui-sref-active="is-active"><a ui-sref="esport">eSports</a></li>
+              <li class="has-dropdown">
+                <a zf-popup-toggle="esport-popup">eSports</a>
+                <zf-popup id="esport-popup">
+                	<ul>
+                		<li ui-sref-active="is-active" ng-repeat="$i in ['League of Legends', 'CS:GO']"><a ui-sref="esport">{{$i}}</a></li>
+                	</ul>
+                </zf-popup>
+              </li>
               <li ui-sref-active="is-active"><a ui-sref="about">About</a></li>
             </ul>
           </div>
