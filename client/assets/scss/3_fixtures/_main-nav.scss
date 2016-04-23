@@ -65,8 +65,6 @@ $menubar-border-color: lighten($menubar-background, 10);
 }
 
 #mobile-nav {
-  width: 100%;
-
   @include breakpoint(medium) {
     display: none;
   }
