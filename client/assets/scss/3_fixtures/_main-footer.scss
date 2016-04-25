@@ -7,7 +7,8 @@
 #main-footer {
   background-color: $menubar-background;
   border-top: 3px solid $primary-color;
-  padding: $global-padding 0;
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
   text-align: center;
 
   .inline {

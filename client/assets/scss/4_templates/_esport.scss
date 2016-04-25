@@ -14,6 +14,10 @@
     }
   }
 
+  .menu-group-center {
+    flex-basis: 100%;
+  }
+
   .division-dropdown > a {
     color: $primary-color;
     @extend %uppercase;

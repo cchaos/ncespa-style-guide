@@ -6,11 +6,13 @@
 
 // make sure the body doesn't scroll
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .grid-frame {
   overflow-y: auto;
+  min-height: 100vh;
+  height: auto;
 
   main {
     overflow: visible;
