@@ -57,6 +57,11 @@
       font-size: $small-font-size;
     }
 
+
+    &.loss .name {
+      opacity: .5;
+    }
+
     &.win {
       color: $primary-color;
     }
@@ -84,7 +89,6 @@
 
   &.is-over {
     background-color: $secondary-color;
-    border-color: $secondary-color;
 
     .header {
       opacity: .5;
