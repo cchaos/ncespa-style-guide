@@ -11,8 +11,10 @@ $table-striped-background: $secondary-color;
 
 table {
   width: 100%;
+  background: white;
   border: 1px solid $table-striped-background;
   margin-bottom: 2rem;
+
 
   th, td {
     padding: $global-padding;

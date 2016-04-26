@@ -95,7 +95,13 @@
   }
 }
 
-// SCHEDULE
+// TEAM
+
+.team-content {
+  table .date {
+    @include no-break();
+  }
+}
 
 
 
