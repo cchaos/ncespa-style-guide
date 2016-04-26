@@ -3,6 +3,35 @@ name: about
 url: /about
 ---
 
-<div class="grid-container">
-  <h1>About</h1>
+<div id="about-page">
+	<header id="about-header">
+	  <div class="grid-content">
+	  	<h1 class="text-center"><strong>Our Mission</strong></h1>
+	  	<p class="ideal text-center">Taxidermy butcher bitters, skateboard mustache venmo fingerstache hoodie biodiesel tousled sartorial pickled.  Gochujang bushwick fanny pack, chartreuse mixtape sartorial paleo.  Kogi master cleanse gluten-free, sustainable ethical dreamcatcher gentrify.</p>
+	  </div>
+	</header>
+
+	<div id="about-team">
+  	<div class="grid-container">
+    	<h1 class="text-center">The Team</h1>
+    	<p class="ideal text-center">Keytar master cleanse viral aesthetic synth, hella portland retro cray kogi pinterest.  Mustache pug asymmetrical poutine, you probably haven't heard of them.</p>
+
+    	<div class="grid-block small-up-1 medium-up-2 large-up-3">
+      	<div class="team-member grid-content" ng-repeat="$i in [1,2,3,4,5,6]">
+        	<div ng-include="'templates/components/_user-image.html'" class="large"></div>
+        	<h3 class="name">Member Name</h3>
+        	<h4 class="position">Member Position</h4>
+        	<p class="ideal text-center">Meggings green juice taxidermy, pinterest church-key intelligentsia single-origin coffee meh fixie hoodie flexitarian authentic bespoke. Dreamcatcher messenger bag schlitz portland ramps wayfarers.</p>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+
+	<div id="about-contact">
+  	<div class="grid-content grid-container">
+  		<h2>Get in Touch</h2>
+  		<p class="ideal">Keytar master cleanse viral aesthetic synth, hella portland retro cray kogi pinterest.  Mustache pug asymmetrical poutine, you probably haven't heard of them.</p>
+  		<p><a href="mailto:" class="button">contact@example.com</a></p>
+  	</div>
+	</div>
 </div>
