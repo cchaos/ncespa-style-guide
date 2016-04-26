@@ -12,7 +12,7 @@ $table-striped-background: $secondary-color;
 table {
   width: 100%;
   background: white;
-  border: 1px solid $table-striped-background;
+  border: 1px solid darken($table-striped-background, 5);
   margin-bottom: 2rem;
 
 
