@@ -10,13 +10,12 @@ body {
 }
 
 .grid-frame {
-  overflow-y: auto;
-  min-height: 100vh;
-  height: auto;
-
   main {
-    overflow: visible;
-    flex-grow: 1;
+    overflow-y: auto;
+
+    .main-view {
+      flex-grow: 1;
+    }
   }
 }
 
