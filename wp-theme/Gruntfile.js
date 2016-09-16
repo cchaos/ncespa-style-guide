@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('../../package.json'),
+    pkg: grunt.file.readJSON('package.json'),
 
     sass: {
       options: {
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     copy: {
       scripts: {
         expand: true,
-        cwd: '../../bower_components/foundation/js/vendor/',
+        cwd: '../bower_components/foundation/js/vendor/',
         src: '**',
         flatten: 'true',
         dest: 'js/vendor/'
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
       iconfonts: {
         expand: true,
-        cwd: '../../bower_components/fontawesome/',
+        cwd: '../bower_components/fontawesome/',
         src: ['**', '!**/less/**', '!**/css/**', '!bower.json'],
         dest: 'assets/fontawesome/'
       },
