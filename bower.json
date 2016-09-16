@@ -4,7 +4,7 @@
   "authors": [
     "Caroline Horn"
   ],
-  "description": "Style Guide to direct style of NCESPA Site",
+  "description": "Style Guide to direct style of NCESPA Wordpress Site",
   "main": "gulpfile.js",
   "keywords": [
     "styel guide",
@@ -12,8 +12,6 @@
     "web",
     "apps"
   ],
-  "license": "MIT",
-  "homepage": "http://foundation.zurb.com",
   "private": true,
   "ignore": [
     "**/.*",
@@ -23,7 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-apps": "~1.2.0",
     "font-awesome": "^4.6.1"
   }
 }
