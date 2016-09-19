@@ -10,11 +10,13 @@
   margin-bottom: 2rem;
 }
 
+.blog .post,
 .featured-news,
 .news-list-item {
 
   .date,
-  .link {
+  .link,
+  .more-link {
     @extend %uppercase;
     font-size: $small-font-size;
   }
@@ -24,8 +26,9 @@
     font-size: $small-font-size*.8;
   }
 
-  .description {
+  .entry-content {
     @extend .ideal;
+    float: none;
   }
 
   .link {
@@ -34,6 +37,7 @@
 
 }
 
+.sticky,
 .featured-news {
   img {
     max-height: 8rem;
@@ -47,14 +51,21 @@
   }
 }
 
+.blog .post {
+  @extend .card;
+}
+
+.sticky,
 .featured-news.large {
+  @extend .dark;
+  position: relative;
 
   .title {
     font-size: $h1-font-size*.8;
   }
 
   img {
-    max-height: 15rem;
+    //max-height: 15rem;
   }
 
   @include breakpoint(medium) {
@@ -65,11 +76,14 @@
 
     img {
       display: block;
-      max-height: none;
+      position: absolute;
+      //max-height: none;
       height: 100%;
       width: 100%;
       vertical-align: inherit;
       opacity: .8;
+      top: 0;
+      left: 0;
     }
 
     position: relative;

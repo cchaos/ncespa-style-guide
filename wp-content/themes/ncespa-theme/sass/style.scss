@@ -61,6 +61,7 @@ Text Domain: ncespa
 @import "1_core/forms";
 @import "1_core/tables";
 @import "1_core/images";
+@import "2_elements/card";
 
 /**
  * 6.0 - Navigation
@@ -233,6 +234,7 @@ blockquote:after,
 @import "3_fixtures/footer";
 @import "3_fixtures/sub-nav";
 
+@import "4_templates/news";
 
 /**
  * 13.0 - Multisites
@@ -441,7 +443,6 @@ blockquote:after,
 
 	.entry-header,
 	.post-thumbnail,
-	.entry-content,
 	.entry-summary,
 	.entry-footer,
 	.comments-area,
@@ -727,7 +728,6 @@ blockquote:after,
 
 	.entry-header,
 	.post-thumbnail,
-	.entry-content,
 	.entry-summary,
 	.entry-footer,
 	.comments-area,
@@ -1142,8 +1142,8 @@ blockquote:after,
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
-		float: right;
-		width: 71.42857144%;
+		//float: right;
+		//width: 71.42857144%;
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
@@ -1204,10 +1204,10 @@ blockquote:after,
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
-		float: left;
-		margin-right: -100%;
-		margin-left: 34.99999999%;
-		width: 50.00000001%;
+		//float: left;
+		//margin-right: -100%;
+		//margin-left: 34.99999999%;
+		//width: 50.00000001%;
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
