@@ -53,6 +53,7 @@
 									wp_nav_menu( array(
 										'theme_location' => 'primary',
 										'menu_class'     => 'primary-menu',
+										//'depth'          => 2,
 									 ) );
 								?>
 							</nav><!-- .main-navigation -->
@@ -74,6 +75,29 @@
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
 			</div><!-- .site-header-main -->
+
+			<div id="sub-header-menu">
+				<!-- <button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'ncespa' ); ?></button> -->
+				<nav id="sub-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'eSport Menu', 'ncespa' ); ?>">
+					<?php
+						if (has_nav_menu( 'esport1' )) {
+  					  wp_nav_menu( array('theme_location' => 'esport1','menu_class' => 'esport1-menu'));
+						}
+						if (has_nav_menu( 'esport2' )) {
+  					  wp_nav_menu( array('theme_location' => 'esport2','menu_class' => 'esport2-menu'));
+						}
+						if (has_nav_menu( 'esport3' )) {
+  					  wp_nav_menu( array('theme_location' => 'esport3','menu_class' => 'esport3-menu'));
+						}
+						if (has_nav_menu( 'event1' )) {
+  					  wp_nav_menu( array('theme_location' => 'event1','menu_class' => 'event1-menu'));
+						}
+						if (has_nav_menu( 'event2' )) {
+  					  wp_nav_menu( array('theme_location' => 'event2','menu_class' => 'event2-menu'));
+						}
+					?>
+				</nav><!-- .main-navigation -->
+			</div><!-- .site-header-menu -->
 
 			<?php if ( get_header_image() ) : ?>
 				<?php

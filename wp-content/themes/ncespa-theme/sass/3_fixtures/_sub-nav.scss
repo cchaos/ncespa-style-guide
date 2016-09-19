@@ -1,0 +1,51 @@
+#sub-header-menu {
+  margin: 0;
+}
+
+#sub-navigation {
+
+  > * {
+    display: none;
+  }
+
+  .category-2 & > .menu-cs-go-nav-container {
+    display: block;
+  }
+
+  .category-4 & > .menu-lol-nav-container {
+    display: block;
+  }
+
+  .page-id-2 & > .menu-ngc-menu-container,
+  .parent-pageid-2 & > .menu-ngc-menu-container, {
+    display: block;
+  }
+
+  .current_page_item a,
+  .current-menu-item a {
+    color: $menubar-color-hover;
+  }
+
+  ul > li {
+    a {
+      padding: 1rem;
+      text-transform: none;
+    }
+
+    &.current-sport a {
+      background-color: $primary-color;
+      color: $menubar-color-hover;
+    }
+  }
+
+  @media screen and (min-width: 56.875em) {
+    ul {
+      border-top: 1px solid lighten($menubar-background, 5%);
+    }
+    ul > li {
+      display: inline-block;
+      border-top: none;
+    }
+  }
+
+}

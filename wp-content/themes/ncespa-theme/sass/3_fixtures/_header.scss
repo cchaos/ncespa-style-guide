@@ -3,12 +3,12 @@
  */
 
 .site-header {
-	padding: 1rem;
 	background: $menubar-background;
 	margin-bottom: 1rem;
 }
 
 .site-header-main {
+	padding: 1rem;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -115,3 +115,5 @@
 .header-image a:focus img {
 	opacity: 0.85;
 }
+
+

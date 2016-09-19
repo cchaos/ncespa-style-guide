@@ -83,6 +83,11 @@ function ncespa_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'ncespa' ),
 		'social'  => __( 'Social Links Menu', 'ncespa' ),
+		'esport1'  => __( 'eSport Menu 1', 'ncespa' ),
+		'esport2'  => __( 'eSport Menu 2', 'ncespa' ),
+		'esport3'  => __( 'eSport Menu 3', 'ncespa' ),
+		'event1'  => __( 'eSport Menu 1', 'ncespa' ),
+    'event2'  => __( 'eSport Menu 2', 'ncespa' ),
 	) );
 
 	/*
