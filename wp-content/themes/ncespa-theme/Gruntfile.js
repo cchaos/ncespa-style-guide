@@ -18,25 +18,27 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'style.css': 'scss/style.scss'
+          'style.css': 'sass/style.scss'
         }
       }
     },
 
     copy: {
+      /*
       scripts: {
         expand: true,
-        cwd: '../bower_components/foundation/js/vendor/',
+        cwd: 'bower_components/foundation/js/vendor/',
         src: '**',
         flatten: 'true',
         dest: 'js/vendor/'
       },
+    */
 
       iconfonts: {
         expand: true,
-        cwd: '../bower_components/fontawesome/',
-        src: ['**', '!**/less/**', '!**/css/**', '!bower.json'],
-        dest: 'assets/fontawesome/'
+        cwd: 'bower_components/fontawesome/',
+        src: ['**/css/font-awesome.min.css'],
+        dest: 'css/'
       },
 
     },
@@ -109,7 +111,7 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
-        files: 'scss/**/*.scss',
+        files: 'sass/**/*.scss',
         tasks: ['sass'],
         options: {
           livereload:35729,

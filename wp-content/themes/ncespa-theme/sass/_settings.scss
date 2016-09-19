@@ -1,0 +1,196 @@
+//  APP VARIABLES
+//  ----------------------------
+
+@import "1_core/functions";
+@import "1_core/shadows";
+@import "1_core/breakpoints";
+@import "1_core/mixins";
+@import "1_core/animation";
+
+// 2. Global Styles
+// - - - - - - - - - - - - - - -
+
+// This sets 1rem to be 16px
+$rem-base: 16px;
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be different and not have it affect the grid breakpoints,
+// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
+$base-font-size: 100%;
+
+// $base-line-height is 24px while $base-font-size is 16px
+$base-line-height: 1.5;
+
+// Text selector helpers
+$headers: "h1,h2,h3,h4,h5,h6";
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,900italic,400italic);
+
+// We use these to define default font weights
+$font-weight-normal: 400;
+$font-weight-bold: 900;
+
+// We use these to control various global styles
+$body-background: #f5f5f5;
+$body-font-color: #333;
+$body-font-family: "Lato", Helvetica, Arial, sans-serif;
+$body-font-weight: $font-weight-normal;
+$body-antialiased: true;
+
+// Application Colors
+$primary-color: #0088ca;
+$secondary-color: #f1f1f1;
+$alert-color: #F04124;
+$info-color: #A0D3E8;
+$success-color: #43AC6A;
+$warning-color: #F08A24;
+$dark-color: #2B2B2B;
+$gray: #aaa;
+$gray-dark: $dark-color;
+$gray-light: #ddd;
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 4px;
+$global-rounded: 1000px;
+
+// We use this for default spacing
+$global-padding: 1rem;
+$global-spacing: rem-calc(15);
+
+// 3. Breakpoints
+// - - - - - - - - - - - - - - -
+
+// These are our named breakpoints. You can use them in our breakpoint function like this: @include breakpoint(medium) { // Medium and larger styles }
+$breakpoints: (
+  small: rem-calc(0),
+  medium: rem-calc(640),
+  large: rem-calc(768),
+  xlarge: rem-calc(1200),
+  xxlarge: rem-calc(1920),
+);
+
+// All of the names in this list will be output as classes in your CSS, like small-12, medium-6, and so on.
+// $breakpoint-classes: (small medium large);
+
+// 4. Typography
+// - - - - - - - - - - - - - - -
+
+// We use these to control header font styles
+$header-font-family: $body-font-family;
+$header-font-weight: $font-weight-normal;
+$header-font-style: $font-weight-normal;
+$header-font-color: $body-font-color;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(24);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
+
+// We use these to control header size reduction on small screens
+$h1-font-reduction: rem-calc(10);
+$h2-font-reduction: rem-calc(5);
+$h3-font-reduction: rem-calc(5);
+$h4-font-reduction: rem-calc(5);
+$h5-font-reduction: 0;
+$h6-font-reduction: 0;
+
+// A general <small> styling
+$small-font-size: 80%;
+$small-font-color: scale-color($header-font-color, $lightness: 35%);
+
+// We use these to style paragraphs
+$paragraph-font-family: inherit;
+$paragraph-font-weight: $font-weight-normal;
+$paragraph-font-size: 1rem;
+$paragraph-line-height: 1.6;
+$paragraph-margin-bottom: rem-calc(20);
+$paragraph-aside-font-size: rem-calc(14);
+$paragraph-aside-line-height: 1.35;
+$paragraph-aside-font-style: italic;
+$paragraph-text-rendering: optimizeLegibility;
+
+// We use these to style anchors
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+
+// We use these to style the <hr> element
+$hr-border-width: 1px;
+$hr-border-style: solid;
+$hr-border-color: #ddd;
+$hr-margin: rem-calc(20);
+
+// We use these to style lists
+$list-font-family: $paragraph-font-family;
+$list-font-size: $paragraph-font-size;
+$list-line-height: $paragraph-line-height;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-position: outside;
+$list-side-margin: 1.1rem;
+$list-ordered-side-margin: 1.4rem;
+$list-side-margin-no-bullet: 0;
+$list-nested-margin: rem-calc(20);
+$definition-list-header-weight: $font-weight-bold;
+$definition-list-header-margin-bottom: .3rem;
+$definition-list-margin-bottom: rem-calc(12);
+
+// We use these to style blockquotes
+$blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid #ddd;
+$blockquote-cite-font-size: rem-calc(13);
+$blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
+$blockquote-cite-link-color: $blockquote-cite-font-color;
+
+// Acronym styles
+$acronym-underline: 1px dotted #ddd;
+
+// 5. Grid
+// - - - - - - - - - - - - - - -
+
+$container-width: rem-calc(1200);
+
+// 11. Card
+// - - - - - - - - - - - - - - -
+
+$card-background: #fff;
+$card-color: isitlight($card-background, inherit, white);
+$card-border: 1px solid rgba($gray, .5);
+$card-radius: $global-radius;
+$card-shadow: none;
+$card-padding: $global-padding;
+$card-margin: 1rem;
+$card-divider-background: smartscale($card-background, 7%);
+
+// 16. Menu Bar
+// - - - - - - - - - - - - - - -
+
+$menubar-fontsize: $small-font-size;
+$menubar-background: $gray-dark;
+$menubar-color: isitlight($menubar-background, $dark-color, $gray);
+$menubar-color-hover: isitlight($menubar-background, $dark-color, $gray-light);
+$menubar-color-active: $primary-color;
+
+$menubar-item-padding: $global-padding;
+$menubar-icon-size: 25px;
+$menubar-icon-spacing: $menubar-item-padding;
+
+// 22. Popup
+// - - - - - - - - - - - - - - -
+$popup-width: rem-calc(300);
+$popup-background: #fff;
+$popup-border: 0;
+$popup-radius: 0;
+$popup-shadow: 0 0 10px rgba(#000, 0.25);
+.popup { @include shadow-4dp;}

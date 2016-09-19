@@ -1,0 +1,31 @@
+/*
+//
+// VODS
+//
+*/
+
+.vod {
+  min-width: rem-calc(160);
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-bottom: $global-padding*2;
+
+  img {
+    width: 100%;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  border: 2px solid $body-background;
+  @include basic-transition;
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+  }
+}

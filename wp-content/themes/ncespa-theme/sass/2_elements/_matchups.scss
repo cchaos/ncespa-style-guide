@@ -1,0 +1,102 @@
+/*
+//
+// MATCHUPS
+//
+*/
+
+
+.matchup {
+
+  margin-bottom: 1rem;
+
+  .header {
+    @extend %uppercase;
+    font-size: $small-font-size;
+    margin: 0;
+    padding: $global-padding;
+    background: $secondary-color;
+  }
+
+  hr {
+    margin: 0;
+    height: 1px;
+  }
+
+  .team + hr {
+    margin: 0 $global-padding;
+  }
+
+  .team {
+    padding: $global-padding;
+
+    .team-image {
+      float: left;
+      margin-right: 1rem;
+    }
+
+    .record,
+    .result {
+      float: right;
+      margin-left: 1rem;
+    }
+
+    .name,
+    .record,
+    .result {
+      line-height: $images-size-small;
+    }
+
+    .record,
+    .result {
+      @extend %uppercase;
+    }
+
+    .record,
+    &.loss .result {
+      opacity: .5;
+      font-size: $small-font-size;
+    }
+
+
+    &.loss .name {
+      opacity: .5;
+    }
+
+    &.win {
+      color: $primary-color;
+    }
+  }
+
+  // STATUS'
+
+  &.is-live {
+    border-color: $primary-color;
+    position: relative;
+
+    .header {
+      background-color: $primary-color;
+      color: rgba(white, .5);
+    }
+  }
+
+  .live {
+    position: absolute;
+    right: $global-padding;
+    top: -3px;
+
+    margin: 0;
+  }
+
+  &.is-over {
+    background-color: $secondary-color;
+
+    .header {
+      opacity: .5;
+    }
+  }
+
+  &:not('.is-alive') .header {
+    color: $primary-color;
+  }
+
+}

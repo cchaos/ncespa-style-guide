@@ -1,7 +1,14 @@
+/**
+ * 1.0 - Normalize
+ *
+ * Normalizing styles have been helped along thanks to the fine work of
+ * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+ */
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -45,32 +52,13 @@ a {
 	background-color: transparent;
 }
 
-a:active,
-a:hover {
-	outline: 0;
-}
-
 abbr[title] {
 	border-bottom: 1px dotted;
 }
 
 b,
 strong {
-	font-weight: bold;
-}
-
-dfn {
-	font-style: italic;
-}
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
-mark {
-	background: #ff0;
-	color: #000;
+	font-weight: 700;
 }
 
 small {
@@ -102,23 +90,19 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 1em 40px;
+	margin: 0;
 }
 
 hr {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
 	box-sizing: content-box;
-	height: 0;
-}
-
-pre {
-	overflow: auto;
 }
 
 code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
 	font-size: 1em;
 }
 
@@ -132,13 +116,19 @@ textarea {
 	margin: 0;
 }
 
+select {
+	text-transform: none;
+}
+
 button {
 	overflow: visible;
 }
 
 button,
-select {
-	text-transform: none;
+input,
+select,
+textarea {
+	max-width: 100%;
 }
 
 button,
@@ -152,6 +142,7 @@ input[type="submit"] {
 button[disabled],
 html input[disabled] {
 	cursor: default;
+	opacity: .5;
 }
 
 button::-moz-focus-inner,
@@ -160,19 +151,32 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-input {
-	line-height: normal;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	margin-right: 0.4375em;
 	padding: 0;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button,
+input[type="week"]::-webkit-inner-spin-button,
+input[type="week"]::-webkit-outer-spin-button,
+input[type="month"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -181,9 +185,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
+	border: 1px solid #d1d1d1;
+	margin: 0 0 1.75em;
+	min-width: inherit;
+	padding: 0.875em;
+}
+
+fieldset > :last-child {
+	margin-bottom: 0;
 }
 
 legend {
@@ -193,18 +202,29 @@ legend {
 
 textarea {
 	overflow: auto;
+	vertical-align: top;
 }
 
 optgroup {
 	font-weight: bold;
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-td,
-th {
-	padding: 0;
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	background: $body-background;
+	/* Fallback for when there is no custom background color defined. */
 }

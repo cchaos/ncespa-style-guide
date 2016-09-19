@@ -1,0 +1,70 @@
+/*
+//
+// ABOUT PAGE
+//
+*/
+
+#about-header,
+#about-contact {
+  padding-top: $global-padding*4;
+  padding-bottom: $global-padding*4;
+}
+
+#about-header {
+  background-color: $gray-dark;
+  border-top: 1px solid $menubar-border-color;
+
+  &, #{$headers} {
+    color: $secondary-color;
+  }
+}
+
+#about-team {
+  padding-top: $global-padding*2;
+  padding-bottom: $global-padding*2;
+
+  h1 + p {
+    color: $gray;
+  }
+
+  .team-member {
+    text-align: center;
+
+    .user-image {
+      margin-top: $global-padding*3;
+      margin-bottom: $global-padding;
+    }
+
+    .name,
+    .position {
+      @extend %uppercase;
+    }
+
+    .position,
+    p {
+      font-size: $small-font-size;
+    }
+
+    .position {
+      color: $gray;
+    }
+
+    p {
+      max-width: 80%;
+    }
+  }
+}
+
+#about-contact {
+  background: linear-gradient(45deg, rgba($primary-color, .75) 0%, rgba($gray-dark, .75) 100%),
+              url("https://source.unsplash.com/featured/random") no-repeat center;
+  background-size: auto, cover;
+
+  &, #{$headers} {
+    color: $secondary-color;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

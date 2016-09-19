@@ -19,7 +19,7 @@
  "scripts": {
    "build": "grunt build",
    "grunt": "grunt",
-   "postinstall": "grunt build",
+   "postinstall": "grunt build && bower install",
    "watch": "grunt watch",
    "browsersync": "grunt browser-sync",
    "package": "grunt package"
