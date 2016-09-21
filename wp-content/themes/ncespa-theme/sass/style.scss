@@ -17,8 +17,53 @@ Text Domain: ncespa
 //  DO NOT DIRECTLY EDIT .css FILE
 //
 
+$foundation-version: '1.2.0';
+
+// Libraries (let's make Normalize an external dependency eventually)
+@import
+  "../bower_components/foundation-apps/scss/vendor/normalize";
+
+// Helpers
+@import
+  "../bower_components/foundation-apps/scss/helpers/functions",
+  "../bower_components/foundation-apps/scss/helpers/mixins",
+  "../bower_components/foundation-apps/scss/helpers/breakpoints",
+  "../bower_components/foundation-apps/scss/helpers/images";
+
 @import "settings";
-@import "normalize";
+
+// Global styles
+@import
+  "../bower_components/foundation-apps/scss/global";
+
+// Components
+@import
+  "../bower_components/foundation-apps/scss/components/iconic",
+  //"../bower_components/foundation-apps/scss/components/action-sheet",
+  //"../bower_components/foundation-apps/scss/components/block-list",
+  "../bower_components/foundation-apps/scss/components/button",
+  //"../bower_components/foundation-apps/scss/components/button-group",
+  "../bower_components/foundation-apps/scss/components/card",
+  "../bower_components/foundation-apps/scss/components/extras",
+  "../bower_components/foundation-apps/scss/components/forms",
+  //"../bower_components/foundation-apps/scss/components/grid",
+  //"../bower_components/foundation-apps/scss/components/title-bar",
+  //"../bower_components/foundation-apps/scss/components/label",
+  //"../bower_components/foundation-apps/scss/components/list",
+	//"../bower_components/foundation-apps/scss/components/menu-bar",
+	//"../bower_components/foundation-apps/scss/components/modal",
+  //"../bower_components/foundation-apps/scss/components/motion",
+  //"../bower_components/foundation-apps/scss/components/notification",
+  //"../bower_components/foundation-apps/scss/components/off-canvas",
+  //"../bower_components/foundation-apps/scss/components/popup",
+  //"../bower_components/foundation-apps/scss/components/switch",
+  //"../bower_components/foundation-apps/scss/components/tabs",
+  //"../bower_components/foundation-apps/scss/components/accordion",
+  "../bower_components/foundation-apps/scss/components/typography",
+  "../bower_components/foundation-apps/scss/components/utilities";
+
+$fa-font-path: 'fonts/';
+@import "../bower_components/font-awesome/scss/font-awesome";
 
 /**
  * 2.0 - Genericons
@@ -61,7 +106,7 @@ Text Domain: ncespa
 @import "1_core/forms";
 @import "1_core/tables";
 @import "1_core/images";
-@import "2_elements/card";
+@import "1_core/grid";
 
 /**
  * 6.0 - Navigation
@@ -229,7 +274,7 @@ blockquote:after,
 
 @import "2_elements/comments";
 @import "3_fixtures/header";
-@import "4_templates/posts_pages";
+//@import "4_templates/posts_pages";
 @import "3_fixtures/sidebar";
 @import "3_fixtures/footer";
 @import "3_fixtures/sub-nav";
@@ -1015,105 +1060,6 @@ blockquote:after,
 
 	.custom-logo {
 		max-width: 240px;
-	}
-
-	.image-navigation {
-		margin-bottom: 3.230769231em;
-	}
-
-	.post-navigation {
-		margin-bottom: 7.0em;
-	}
-
-	.pagination {
-		margin-bottom: 5.894736842em;
-	}
-
-	.widget {
-		margin-bottom: 4.307692308em;
-	}
-
-	.site-main > article {
-		margin-bottom: 7.0em;
-	}
-
-	.entry-title {
-		font-size: 40px;
-		font-size: 2.5rem;
-		line-height: 1.225;
-		margin-bottom: 1.05em;
-	}
-
-	.format-aside .entry-title,
-	.format-image .entry-title,
-	.format-video .entry-title,
-	.format-quote .entry-title,
-	.format-gallery .entry-title,
-	.format-status .entry-title,
-	.format-link .entry-title,
-	.format-audio .entry-title,
-	.format-chat .entry-title {
-		font-size: 23px;
-		font-size: 1.4375em;
-		line-height: 1.304347826;
-		margin-bottom: 1.826086957em;
-	}
-
-	.post-thumbnail {
-		margin-bottom: 2.625em;
-	}
-
-	.entry-content h1,
-	.entry-summary h1,
-	.comment-content h1 {
-		font-size: 33px;
-		font-size: 2.0625rem;
-		line-height: 1.2727272727;
-		margin-top: 1.696969697em;
-		margin-bottom: 0.8484848485em;
-	}
-
-	.entry-content h2,
-	.entry-summary h2,
-	.comment-content h2 {
-		font-size: 28px;
-		font-size: 1.75rem;
-		line-height: 1.25;
-		margin-top: 2em;
-		margin-bottom: 1em;
-	}
-
-	.entry-content h3,
-	.entry-summary h3,
-	.comment-content h3 {
-		font-size: 23px;
-		font-size: 1.4375rem;
-		line-height: 1.2173913043;
-		margin-top: 2.4347826087em;
-		margin-bottom: 1.2173913043em;
-	}
-
-	.entry-content h4,
-	.entry-summary h4,
-	.entry-intro h4,
-	.comment-content h4 {
-		letter-spacing: 0.131578947em;
-	}
-
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6,
-	.entry-summary h4,
-	.entry-summary h5,
-	.entry-summary h6,
-	.comment-content h4,
-	.comment-content h5,
-	.comment-content h6 {
-		font-size: 19px;
-		font-size: 1.1875rem;
-		line-height: 1.1052631579;
-		margin-top: 2.9473684211em;
-		margin-bottom: 1.473684211em;
 	}
 
 	.author-info {

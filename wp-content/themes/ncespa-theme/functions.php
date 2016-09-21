@@ -241,7 +241,7 @@ function ncespa_scripts() {
 	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
 	// Add FontAwesome, used in the main stylesheet.
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/fontawesome/fontawesome.css', array(), null );
+	//wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/fontawesome/fontawesome.css', array(), null );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'ncespa-style', get_stylesheet_uri() );

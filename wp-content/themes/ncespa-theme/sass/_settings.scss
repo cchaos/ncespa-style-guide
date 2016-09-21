@@ -1,10 +1,7 @@
 //  APP VARIABLES
 //  ----------------------------
 
-@import "1_core/functions";
 @import "1_core/shadows";
-@import "1_core/breakpoints";
-@import "1_core/mixins";
 @import "1_core/animation";
 
 // 2. Global Styles
@@ -63,6 +60,7 @@ $global-spacing: rem-calc(15);
 // 3. Breakpoints
 // - - - - - - - - - - - - - - -
 
+/*
 // These are our named breakpoints. You can use them in our breakpoint function like this: @include breakpoint(medium) { // Medium and larger styles }
 $breakpoints: (
   small: rem-calc(0),
@@ -71,6 +69,7 @@ $breakpoints: (
   xlarge: rem-calc(1200),
   xxlarge: rem-calc(1920),
 );
+*/
 
 // All of the names in this list will be output as classes in your CSS, like small-12, medium-6, and so on.
 // $breakpoint-classes: (small medium large);
@@ -185,12 +184,3 @@ $menubar-color-active: $primary-color;
 $menubar-item-padding: $global-padding;
 $menubar-icon-size: 25px;
 $menubar-icon-spacing: $menubar-item-padding;
-
-// 22. Popup
-// - - - - - - - - - - - - - - -
-$popup-width: rem-calc(300);
-$popup-background: #fff;
-$popup-border: 0;
-$popup-radius: 0;
-$popup-shadow: 0 0 10px rgba(#000, 0.25);
-.popup { @include shadow-4dp;}

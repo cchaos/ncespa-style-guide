@@ -5,6 +5,7 @@
 */
 
 // make sure the body doesn't scroll
+/*
 body {
   overflow-x: hidden;
 }
@@ -18,9 +19,11 @@ body {
     }
   }
 }
+*/
 
-// custom har with a bit of brand color on left
+// custom hr with a bit of brand color on left
 hr {
+  margin: 1.25em 0 1.1875em;
   border: none;
   height: 3px;
   background: linear-gradient(to right, $gray-light 0%, $gray-light 66%, $primary-color 66%, $primary-color 100%);

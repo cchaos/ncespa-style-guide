@@ -173,15 +173,36 @@ if ( ! function_exists( 'ncespa_excerpt_more' ) && ! is_admin() ) :
  *
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function ncespa_excerpt_more() {
+function ncespa_excerpt_more($ellipse = true) {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
 		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ncespa' ), get_the_title( get_the_ID() ) )
 	);
-	return ' &hellip; ' . $link;
+
+	if ( $ellipse ) :
+	  return ' &hellip; <p class="link">' . $link . '</p>';
+  else :
+    return '<p class="link">' . $link . '</p>';
+  endif;
 }
 add_filter( 'excerpt_more', 'ncespa_excerpt_more' );
+endif;
+
+if ( ! function_exists( 'ncespa_manuel_excerpt' ) && ! is_admin() ) :
+/**
+ * Adds 'Continue reading' link to manual excerpts
+ *
+ * @return excerpt and 'Continue reading' link
+ */
+function ncespa_manuel_excerpt( $excerpt ) {
+	$excerpt_more = '';
+	if( has_excerpt() ) {
+    	$excerpt_more = ncespa_excerpt_more(false);
+	}
+	return $excerpt . $excerpt_more;
+}
+add_filter( 'get_the_excerpt', 'ncespa_manuel_excerpt' );
 endif;
 
 if ( ! function_exists( 'ncespa_categorized_blog' ) ) :

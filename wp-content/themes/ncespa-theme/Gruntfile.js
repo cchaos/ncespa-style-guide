@@ -2,6 +2,8 @@ module.exports = function(grunt) {
   // time
   require('time-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-postcss');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -23,43 +25,60 @@ module.exports = function(grunt) {
       }
     },
 
-    copy: {
-      /*
-      scripts: {
-        expand: true,
-        cwd: 'bower_components/foundation/js/vendor/',
-        src: '**',
-        flatten: 'true',
-        dest: 'js/vendor/'
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions']})
+        ]
       },
-    */
+      dist: {
+        src: 'style.css'
+      }
+    },
+
+    copy: {
+      // scripts: {
+      //   expand: true,
+      //   cwd: 'bower_components/foundation/js/vendor/',
+      //   src: '**',
+      //   flatten: 'true',
+      //   dest: 'js/vendor/'
+      // },
 
       iconfonts: {
         expand: true,
-        cwd: 'bower_components/fontawesome/',
-        src: ['**/css/font-awesome.min.css'],
-        dest: 'css/'
+        cwd: 'bower_components/font-awesome/fonts',
+        src: '**',
+        dest: 'fonts/'
       },
+
+      // icons: {
+      //   expand: true,
+      //   cwd: 'bower_components/foundation-apps/iconic',
+      //   src: '**',
+      //   dest: 'img/icons/'
+      // },
 
     },
 
 
-      'string-replace': {
-
-        fontawesome: {
-          files: {
-            'assets/fontawesome/scss/_variables.scss': 'assets/fontawesome/scss/_variables.scss'
-          },
-          options: {
-            replacements: [
-              {
-                pattern: '../fonts',
-                replacement: '../assets/fontawesome/fonts'
-              }
-            ]
-          }
-        },
-      },
+     // 'string-replace': {
+     //
+     //   fontawesome: {
+     //     files: {
+     //       'assets/font-awesome/scss/_variables.scss': 'assets/font-awesome/scss/_variables.scss'
+     //     },
+     //     options: {
+     //       replacements: [
+     //         {
+     //           pattern: '../fonts',
+     //           replacement: '../assets/fontawesome/fonts'
+     //         }
+     //       ]
+     //     }
+     //   },
+     // },
 
     concat: {
         options: {
@@ -142,6 +161,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-string-replace');
 
-  grunt.registerTask('build', ['copy', 'string-replace:fontawesome', 'sass', 'concat', 'uglify']);
+  grunt.registerTask('build', ['copy', 'sass', 'postcss', 'concat', 'uglify']);
   grunt.registerTask('default', ['watch']);
 };

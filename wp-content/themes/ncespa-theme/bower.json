@@ -22,5 +22,8 @@
   ],
   "dependencies": {
     "font-awesome": "^4.6.1"
+  },
+  "devDependencies": {
+    "foundation-apps": "^1.2.0"
   }
 }
