@@ -8,3 +8,18 @@
 }
 
 
+@include breakpoint(medium) {
+	.sidebar {
+		margin-bottom: 5.25em;
+		padding-right: 23.0769%;
+	}
+}
+
+@include breakpoint(large) {
+	.sidebar {
+		float: left;
+		margin-left: 65%;
+		padding: 0;
+		width: 35%;
+	}
+}

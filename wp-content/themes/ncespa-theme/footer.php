@@ -25,30 +25,45 @@
 				</nav><!-- .main-navigation -->
 			<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'ncespa' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
-							'depth'          => 1,
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>',
-						) );
-					?>
-				</nav><!-- .social-navigation -->
-			<?php endif; ?>
+			<div class="footer-navs">
+  			<?php if ( has_nav_menu( 'social' ) ) : ?>
+          <nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'ncespa' ); ?>">
+            <?php
+              wp_nav_menu( array(
+                'theme_location' => 'social',
+                'menu_class'     => 'social-links-menu',
+                'depth'          => 1,
+                'link_before'    => '<span class="screen-reader-text">',
+                'link_after'     => '</span>',
+              ) );
+            ?>
+          </nav><!-- .social-navigation -->
+        <?php endif; ?>
 
-			<div class="site-info">
-				<?php
-					/**
-					 * Fires before the ncespa footer text for footer customization.
-					 */
-					do_action( 'ncespa_credits' );
-				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ncespa' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'ncespa' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
+        <?php if ( has_nav_menu( 'legal' ) ) : ?>
+          <nav class="legal-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Legal Menu', 'ncespa' ); ?>">
+            <?php
+              wp_nav_menu( array(
+                'theme_location' => 'legal',
+                'menu_class'     => 'legal-menu',
+               ) );
+            ?>
+          </nav><!-- .legal-navigation -->
+        <?php endif; ?>
+      </div>
+
+			<div class="sponsors">
+        <div>
+          <h5>Our Sponsors</h5>
+          <a href="http://www.twitch.tv/"><img src="<?php echo get_template_directory_uri() ?>/img/Twitch_logo.png" alt="Twitch"></a>
+        </div>
+        <div>
+          <h5>Our Partners</h5>
+          <a href="http://spheric.io"><img src="<?php echo get_template_directory_uri() ?>/img/Spheric_logo.png" alt="Spheric"></a>
+        </div>
+      </div>
+
+			<p class="copy"><img src="<?php echo get_template_directory_uri() ?>/img/NCESPA_logo_small.png" alt="" width="20"> <small>&copy;<?php echo date('Y') ?> National Collegiate eSports Association&reg;. All Rights Reserved.</small></p>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->

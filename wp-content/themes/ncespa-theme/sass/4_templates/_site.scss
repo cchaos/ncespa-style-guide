@@ -10,6 +10,10 @@
 .site-content {
 	word-wrap: break-word;
   padding: 0 4%;
+
+	max-width: $column-width + 4rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Do not show the outline on the skip link target. */
@@ -28,5 +32,37 @@
 @include breakpoint(medium) {
   .site-main {
 		margin-bottom: 5.25em;
+	}
+}
+
+@include breakpoint(large) {
+	.site-footer .main-navigation {
+		display: none;
+	}
+
+	.site-content {
+		padding: 0 2%;
+	}
+
+	.content-area {
+		float: left;
+		margin-right: -100%;
+		width: 60%;
+	}
+}
+
+@include breakpoint(xlarge) {
+	.site-main {
+		margin-bottom: 7.0em;
+	}
+
+	.site-content {
+  	//padding: 0 3rem;
+	}
+}
+
+@include breakpoint(xxlarge) {
+	.site-content {
+  	padding: 0 2rem;
 	}
 }
