@@ -764,7 +764,7 @@ function ncespa_page_background_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'ncespa-style', sprintf( $css, $page_background_color ) );
+	//wp_add_inline_style( 'ncespa-style', sprintf( $css, $page_background_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'ncespa_page_background_color_css', 11 );
 
@@ -852,7 +852,7 @@ function ncespa_link_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'ncespa-style', sprintf( $css, $link_color ) );
+	//wp_add_inline_style( 'ncespa-style', sprintf( $css, $link_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'ncespa_link_color_css', 11 );
 
@@ -981,7 +981,7 @@ function ncespa_main_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'ncespa-style', sprintf( $css, $main_text_color, $border_color ) );
+	//wp_add_inline_style( 'ncespa-style', sprintf( $css, $main_text_color, $border_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'ncespa_main_text_color_css', 11 );
 
@@ -1053,6 +1053,6 @@ function ncespa_secondary_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'ncespa-style', sprintf( $css, $secondary_text_color ) );
+	//wp_add_inline_style( 'ncespa-style', sprintf( $css, $secondary_text_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'ncespa_secondary_text_color_css', 11 );

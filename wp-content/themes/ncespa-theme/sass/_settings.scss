@@ -60,16 +60,14 @@ $global-spacing: rem-calc(15);
 // 3. Breakpoints
 // - - - - - - - - - - - - - - -
 
-/*
 // These are our named breakpoints. You can use them in our breakpoint function like this: @include breakpoint(medium) { // Medium and larger styles }
 $breakpoints: (
   small: rem-calc(0),
-  medium: rem-calc(640),
-  large: rem-calc(768),
-  xlarge: rem-calc(1200),
-  xxlarge: rem-calc(1920),
+  medium: rem-calc(710),
+  large: rem-calc(910),
+  xlarge: rem-calc(985),
+  xxlarge: rem-calc(1200),
 );
-*/
 
 // All of the names in this list will be output as classes in your CSS, like small-12, medium-6, and so on.
 // $breakpoint-classes: (small medium large);
@@ -180,6 +178,7 @@ $menubar-background: $gray-dark;
 $menubar-color: isitlight($menubar-background, $dark-color, $gray);
 $menubar-color-hover: isitlight($menubar-background, $dark-color, $gray-light);
 $menubar-color-active: $primary-color;
+$menubar-border-color: lighten($menubar-background, 5%);
 
 $menubar-item-padding: $global-padding;
 $menubar-icon-size: 25px;

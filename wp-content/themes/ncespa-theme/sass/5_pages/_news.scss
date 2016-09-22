@@ -25,6 +25,7 @@
 
   .link {
     margin-bottom: 0;
+    text-align: right;
   }
 
   .sticky:first-child {
@@ -81,22 +82,10 @@
       border: 1px solid rgba($body-background, 0); // keeps the image from bleeding outside the rounded corners
       margin-bottom: 2rem;
 
-      position: relative;
       img {
         display: block;
-        position: absolute;
-        min-height: 100%;
-        min-width: 100%;
+        width: 100%;
         vertical-align: inherit;
-        opacity: .8;
-        top: 0;
-        left: 0;
-        z-index: 0;
-      }
-
-      .entry-content {
-        position: relative;
-        z-index: 1;
       }
     }
   }
@@ -132,11 +121,6 @@
 
     p:not(.link) {
       font-size: .9rem;
-      //max-width: 36rem;
-    }
-
-    .link {
-      text-align: right;
     }
 
     .card & {

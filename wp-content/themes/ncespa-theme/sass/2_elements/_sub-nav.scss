@@ -38,7 +38,7 @@
     }
   }
 
-  @media screen and (min-width: 56.875em) {
+  @include breakpoint(large) {
     ul {
       border-top: 1px solid lighten($menubar-background, 5%);
     }

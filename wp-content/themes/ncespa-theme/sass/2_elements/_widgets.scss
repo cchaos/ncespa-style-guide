@@ -3,31 +3,66 @@
  */
 
 .widget {
-	border-top: 4px solid #1a1a1a;
-	margin-bottom: 3.5em;
-	padding-top: 1.75em;
+	border-top: 3px solid $body-font-color;
+	margin-bottom: 2rem;
+	padding-top: 2rem;
 }
 
 .widget-area > :last-child,
-.widget > :last-child {
+.widget > :last-child,
+.textwidget > :last-child {
 	margin-bottom: 0;
+
+	.button:last-child {
+  	margin-bottom: 0;
+	}
+}
+
+.widget_search {
+  label > .inline-label {
+    margin: 0;
+  }
+}
+
+.widget .post-date {
+  @extend %uppercase;
+  font-weight: normal;
 }
 
 .widget .widget-title {
-	font-size: 16px;
-	font-size: 1rem;
-	letter-spacing: 0.046875em;
-	line-height: 1.3125;
-	margin: 0 0 1.75em;
-	text-transform: uppercase;
+	@extend %section-header;
+	margin-top: 0;
 }
 
 .widget .widget-title:empty {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 .widget-title a {
-	color: #1a1a1a;
+	color: $body-font-color;
+}
+
+/* Recent Entries widget */
+.widget_recent_entries {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    border-top: 3px solid $gray-light;
+  }
+
+  li {
+    padding: 1rem;
+    border-bottom: 3px solid $gray-light;
+  }
+
+  .post-date {
+    text-align: right;
+    display: block;
+  	color: $gray;
+  	font-size: $small-font-size;
+  }
+
 }
 
 /* Calendar widget */
@@ -58,20 +93,6 @@
 .widget_calendar tbody a:focus {
 	background-color: #686868;
 	color: #fff;
-}
-
-/* Recent Posts widget */
-.widget_recent_entries .post-date {
-	color: #686868;
-	display: block;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	line-height: 1.615384615;
-	margin-bottom: 0.538461538em;
-}
-
-.widget_recent_entries li:last-child .post-date {
-	margin-bottom: 0;
 }
 
 /* RSS widget */
@@ -113,4 +134,66 @@
 	border-color: #007acc;
 	color: #007acc;
 	outline: 0;
+}
+
+
+
+@include breakpoint(medium) {
+  .widget {
+		margin-bottom: 5.25rem;
+	}
+}
+
+@include breakpoint(large) {
+  .widget {
+		margin-bottom: 3rem;
+		padding-top: 3rem;
+	}
+
+	.widget li > ul,
+	.widget li > ol {
+		margin-bottom: 0;
+	}
+
+	.widget blockquote {
+		margin-bottom: 1.3rem;
+		padding-left: 1rem;
+	}
+
+	.widget blockquote cite,
+	.widget blockquote small {
+		font-size: $small-font-size;
+	}
+
+	.widget th,
+	.widget td {
+		padding: 0.5rem;
+	}
+
+	.widget .alignleft {
+		margin: 0.2rem 1.6rem 1.6rem 0;
+	}
+
+	.widget .alignright {
+		margin: 0.2rem 0 1.6rem 1.6rem;
+	}
+
+	.widget .aligncenter {
+		margin-bottom: 1.6rem;
+	}
+
+	.widget_calendar td,
+	.widget_calendar th {
+		line-height: 2.6923076923;
+		padding: 0;
+	}
+
+	.widget_rss .rssSummary:last-child {
+		margin-bottom: 1.615384615em;
+	}
+
+	.tagcloud a {
+		margin: 0 0.2307692308em 0.5384615385em 0;
+		padding: 0.5384615385em 0.4615384615em 0.4615384615em;
+	}
 }

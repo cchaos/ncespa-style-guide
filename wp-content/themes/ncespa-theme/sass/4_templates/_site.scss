@@ -1,0 +1,32 @@
+.site {
+	background-color: $body-background;
+}
+
+.site-inner {
+	margin: 0 auto;
+	position: relative;
+}
+
+.site-content {
+	word-wrap: break-word;
+  padding: 0 4%;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+.site-main {
+	margin-bottom: 3.5rem;
+}
+
+.site-main > :last-child {
+	margin-bottom: 0;
+}
+
+@include breakpoint(medium) {
+  .site-main {
+		margin-bottom: 5.25em;
+	}
+}

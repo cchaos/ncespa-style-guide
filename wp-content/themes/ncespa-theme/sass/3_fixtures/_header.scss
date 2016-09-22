@@ -1,22 +1,12 @@
-/**
- * 11.1 - Header
- */
-
 .site-header {
 	background: $menubar-background;
-	margin-bottom: 1rem;
+	margin-bottom: 4%;
 }
 
 .site-header-main {
 	padding: 1rem;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
@@ -36,10 +26,8 @@
 }
 
 .site-title {
-	font-size: 23px;
-	font-size: 1.4375rem;
+	font-size: $h2-font-size;
 	font-weight: 700;
-	line-height: 1.2173913043;
 	margin: 0;
 }
 
@@ -53,26 +41,25 @@
 }
 
 .wp-custom-logo .site-title {
-	margin-top: 0.608695652em;
+	margin-top: 0.6rem;
 }
 
 .site-description {
-	color: #686868;
+	color: $menubar-color;
 	display: none;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: $small-font-size;
 	font-weight: 400;
-	line-height: 1.0769230769;
-	margin: 0.538461538em 0 0;
+	margin: 0.5rem 0 0;
 }
 
 .menu-toggle {
 	background-color: transparent;
-	border: 1px solid darken($menubar-color, 20%);
+	border: 1px solid $menubar-border-color;
 	color: $menubar-color;
+	@extend %uppercase;
 	font-size: $menubar-fontsize;
 	margin: 0;
-	padding: 0.769230769rem;
+	padding: 0.7rem;
 }
 
 .no-js .menu-toggle {
@@ -89,8 +76,8 @@
 .menu-toggle.toggled-on,
 .menu-toggle.toggled-on:hover,
 .menu-toggle.toggled-on:focus {
-	background-color: darken($menubar-color, 20%);
-	border-color: darken($menubar-color, 20%);
+	background-color: $menubar-border-color;
+	border-color: $menubar-border-color;
 	color: $menubar-color-hover;
 }
 
@@ -114,6 +101,69 @@
 .header-image a:hover img,
 .header-image a:focus img {
 	opacity: 0.85;
+}
+
+.site-header-menu {
+	display: none;
+	flex: 0 1 100%;
+	margin: 0.875em 0 0;
+}
+
+.site-header-menu.toggled-on,
+.no-js .site-header-menu {
+	display: block;
+}
+
+.site-header .main-navigation + .social-navigation {
+	margin-top: 1rem;
+}
+
+@include breakpoint(medium) {
+  .custom-logo {
+		max-width: 210px;
+	}
+
+	.site-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+		line-height: 1.25;
+	}
+
+	.wp-custom-logo .site-title {
+		margin-top: 0.5em;
+	}
+
+	.site-description {
+		display: block;
+	}
+
+	.header-image {
+		margin: 1.3125em 0;
+	}
+}
+
+@include breakpoint(large) {
+	.site-header {
+		padding-right: 4%;
+		padding-left: 4%;
+	}
+
+	.site-header-main {
+		align-items: flex-start;
+	}
+
+	.wp-custom-logo .site-header-main {
+		align-items: center;
+	}
+
+	.site-header-menu {
+		display: block;
+		flex: 0 1 auto;
+	}
+
+	.site-header .social-navigation {
+		display: none;
+	}
 }
 
 
