@@ -11,6 +11,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<h6 class="date"><?php the_date() ?></h6>
+		<hr>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

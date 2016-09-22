@@ -309,6 +309,14 @@ function ncespa_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	if ( is_single() ) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category) {
+      // add category slug to the $classes array
+      $classes[] = 'category-' . $category->category_nicename;
+    }
+  }
+
 	return $classes;
 }
 add_filter( 'body_class', 'ncespa_body_classes' );

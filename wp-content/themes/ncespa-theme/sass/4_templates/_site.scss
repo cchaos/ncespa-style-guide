@@ -36,15 +36,31 @@
 }
 
 @include breakpoint(large) {
+  .site {
+    height: 100%;
+  }
+
+  .site-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .site-header,
+  .site-footer {
+    flex: 0 0 auto;
+  }
+
 	.site-footer .main-navigation {
 		display: none;
 	}
 
 	.site-content {
 		padding: 0 2%;
+		flex: 1 1 100%;
 	}
 
-	.content-area {
+	.content-area:not(.no-sidebar) .site-main {
 		float: left;
 		margin-right: -100%;
 		width: 60%;

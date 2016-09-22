@@ -4,12 +4,9 @@
 //
 */
 
-#article-page {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-
+.single article {
   header {
-    .title {
+    .entry-title {
       font-weight: $font-weight-bold;
       text-align: center;
     }
@@ -27,23 +24,24 @@
     }
   }
 
-  article {
-    .secondary-header {
-      @extend %uppercase;
-      font-size: 1rem;
-    }
+  h2 {
+    @extend %section-header;
+    font-size: 1rem;
+  }
 
-    .pull-quote {
-      font-size: $h2-font-size;
-      font-weight: $font-weight-bold;
-      color: $gray;
-      max-width: 80%;
-      margin: 2rem auto;
-    }
+  .pull-quote {
+    font-size: $h2-font-size;
+    font-weight: $font-weight-bold;
+    color: $gray;
+    max-width: 80%;
+    margin: 2rem auto;
+  }
 
-    @include breakpoint(large) {
-      padding-right: 10%;
-    }
+  @include breakpoint(large) {
+    //padding-right: 10%;
+
+    @include card-container;
+    @include card-section;
   }
 }
 

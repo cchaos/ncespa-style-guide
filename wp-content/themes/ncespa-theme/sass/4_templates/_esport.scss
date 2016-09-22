@@ -4,46 +4,6 @@
 //
 */
 
-#esport-sub-nav {
-
-  .menu-group-left {
-    border-bottom: 3px solid $primary-color;
-
-    a {
-      color: $primary-color;
-    }
-  }
-
-  .menu-group-center {
-    flex-basis: 100%;
-  }
-
-  .division-dropdown > a {
-    color: $primary-color;
-    @extend %uppercase;
-  }
-
-  @include breakpoint(small only) {
-    // change order on small screens
-    .menu-group-center {
-      order: 3;
-    }
-    .menu-group-right {
-      order: 2;
-    }
-
-    // and make sure the left and right ones are on the same line
-    .menu-group-left,
-    .menu-group-right {
-      flex-basis: auto;
-      border-bottom: 3px solid $primary-color;
-    }
-
-
-  }
-
-}
-
 // TEAMS
 
 .esport-teams {

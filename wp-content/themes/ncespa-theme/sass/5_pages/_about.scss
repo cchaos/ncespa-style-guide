@@ -4,6 +4,27 @@
 //
 */
 
+.page-id-22 {
+  .site-header {
+    margin-bottom: 0;
+  }
+
+  .site-content {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .site-main {
+    margin-bottom: 0;
+  }
+
+  .entry-header {
+    display: none;
+  }
+}
+
+#about-mission,
 #about-header,
 #about-contact {
   padding-top: $global-padding*4;
@@ -56,6 +77,7 @@
 }
 
 #about-contact {
+  text-align: center;
   background: linear-gradient(45deg, rgba($primary-color, .75) 0%, rgba($gray-dark, .75) 100%),
               url("https://source.unsplash.com/featured/random") no-repeat center;
   background-size: auto, cover;
